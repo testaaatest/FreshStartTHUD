@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<config>
+
+	<overrides>
+	
+		<!-- disable template for all dropped items / Re-added as <ITEMS> -->
+		<override_Dropped_Items_Template enabled="1" file="ui_default_actors_items" path="templates.items_with_circle.enabled" value="0" />
+
+		<!-- disable ground circle for all dropped items -->
+		<override_Dropped_Items_GCircle1 enabled="1" file="ui_default_actors_items" path="templates.items_with_circle.ground_circle.enabled" value="0" />
+
+		<!-- disable Legendary item tracking / Re-added as <ITEMS> -->
+		<override_Legendary_Drops enabled="1" file="ui_default_actors_items" path="items.legendary.enabled" value="0" />
+
+		<!-- disable Ancient Legendary item tracking / Re-added as <ITEMS> -->
+		<override_Ancient_Legendary_Drops enabled="1" file="ui_default_actors_items" path="items.ancient_legendary.enabled" value="0" />
+
+		<!-- disable Legendary item tracking / Re-added as <ITEMS> -->
+		<override_Legendary_Drops enabled="1" file="ui_default_actors_items" path="items.legendary.enabled" value="0" />
+
+		<!-- disable Ancient Legendary item tracking / Re-added as <ITEMS> -->
+		<override_Ancient_Legendary_Drops enabled="1" file="ui_default_actors_items" path="items.ancient_legendary.enabled" value="0" />
+		
+	</overrides>
+	
+	<actors>
+	
+		<!-- mark Crafting Material (gem) drops on minimap & ground:
+		Imperial Gems: Amethyst 361564, Diamond 361560, Emerald 361492, Ruby 361568, Topaz 361572 /
+		Marquise Gems: Amethyst 283116, Diamond 361559, Emerald 283117, Ruby 283118, Topaz 283119 /
+		All Crafting Mats (Forgotten Soul, Death's Breath, Veiled Crystal, Arcane Dust): 137958 /
+		Rift Keystone Fragment: 323722	-->
+		<Mark_Gems enabled="1" keywords="snos=361564|361560|361492|361568|361572|283116|361559|283117|283118|283119">
+			<map_shape enabled="1" radius="2" ping_speed="0" shape="circle" color="255,250,150,140" stroke="2" />
+			<ground_circle enabled="1" radius="1.25" color="255,255,150,140" stroke="4.5" />
+		</Mark_Gems>
+	
+	</actors>
+
+	<items>
+	
+		<!-- mark Legendaries on minimap & ground circle / keywords="legendary,unidentified">	-->
+		<Mark_Legendary_Items enabled="1" speech_text="" keywords="legendary_regular,unidentified">
+			<map_shape enabled="1" radius="7" ping_speed="333" shape="triangle-rotate" color="255,255,160,0" stroke="2.5" />
+			<ground_circle enabled="1" radius="1.25" ping_speed="0" color="200,255,160,0" stroke="5" />
+			<ground_label enabled="1" on_screen="1" off_screen="1" text="default">
+				<body enabled="1" color="160,0,0,0" stroke="0" />
+				<text font_family="verdana" font_size="7.0" font_bold="0" font_color="255,255,160,0" font_shadow="0" />
+			</ground_label>
+		</Mark_Legendary_Items>
+
+		<!-- mark Ancient Legendaries on minimap & ground circle / keywords="legendary_ancient,unidentified">	-->
+		<Mark_Ancient_Legendary_Items enabled="1" speech_text="" keywords="legendary_ancient,unidentified">
+			<map_shape enabled="1" radius="9" ping_speed="333" shape="triangle-rotate" color="255,255,120,0" stroke="3.0" />
+			<ground_circle enabled="1" radius="1.75" ping_speed="0" color="200,255,120,0" stroke="5" />
+			<ground_label enabled="1" on_screen="1" off_screen="1" text="default">
+				<body enabled="1" color="160,0,0,0" stroke="0" />
+				<text font_family="verdana" font_size="8.0" font_bold="1" font_color="255,255,120,0" font_shadow="1" />
+			</ground_label>
+		</Mark_Ancient_Legendary_Items>
+
+		<!-- mark Magic items -->
+		<Mark_Magic_Items enabled="1" speech_text="" keywords="magic_only">
+			<map_shape enabled="1" radius="4" ping_speed="0" shape="circle" color="255,0,100,255" stroke="1" />
+			<ground_circle enabled="1" radius="1" color="180,0,100,255" stroke="3" />
+		</Mark_Magic_Items>
+
+		<!-- ==============================	-->
+
+		<!-- mark Uber Items/Keys/Parts, Rift Keystone Fragment, Greater Rift Keystone, Keystone of Trials -->
+		<Mark_Uber_Rift_Keys enabled="1" speech_text="" keywords="groups=Uber|RiftKeystone">
+			<map_shape enabled="1" radius="8" ping_speed="333" shape="triangle-rotate" color="255,255,160,0" stroke="3" />
+			<ground_circle enabled="1" radius="1.50" ping_speed="0" color="200,255,160,0" stroke="5" />
+			<ground_label enabled="1" on_screen="0" off_screen="1" text="default">
+				<body enabled="1" color="160,0,0,0" stroke="0" />
+				<text font_family="verdana" font_size="7.0" font_bold="0" font_color="255,255,160,0" font_shadow="0" />
+			</ground_label>
+		</Mark_Uber_Rift_Keys>
+
+		<!-- mark Higher-Tier Crafting Materials (Forgotten Soul|Death's Breath) -->
+		<Crafting_Mats_High enabled="1" speech_text="" keywords="groups=Forgotten Soul|Death's Breath">
+			<map_shape enabled="1" radius="2" ping_speed="0" shape="circle" color="255,250,150,140" stroke="2" />
+			<ground_circle enabled="1" radius="1.25" ping_speed="0" color="200,255,160,0" stroke="5" />
+			<ground_label enabled="1" on_screen="0" off_screen="1" text="default">
+				<body enabled="1" color="160,0,0,0" stroke="0" />
+				<text font_family="verdana" font_size="7.0" font_bold="0" font_color="255,255,200,0" font_shadow="0" />
+			</ground_label>
+		</Crafting_Mats_High>
+
+	</items>
+
+</config>

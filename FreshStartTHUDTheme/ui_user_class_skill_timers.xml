@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<config>
+
+	<templates>
+
+		<!-- Add new template for SKILL TIMERS (Actors) -->
+		<cd_timer enabled="1">
+			<!-- value_format can be 'dyn', 'F0', 'F1' -->
+			<ground_label enabled="1" on_screen="1" off_screen="1" use_bottom="0" text="{value}" value_format="F1">
+				<body enabled="0" color="192,0,0,0" stroke="0" />
+				<text font_family="verdana" font_size="8" font_bold="1" font_shadow="1">
+					<custom_shadow enabled="1" heavy="1" color="150,0,0,0" />
+				</text>
+			</ground_label>
+			<ground_timer enabled="1" radius="25" use_bottom="0">
+				<empty enabled="1" color="64,0,0,0" stroke="0" />
+				<fill enabled="1" color="160,255,255,255" stroke="0" />
+			</ground_timer>
+		</cd_timer>
+
+	</templates>
+
+	<actors>
+
+		<!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^	-->
+		<!--	PLAYER SKILLS	     	-->
+		<!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^	-->
+
+		<!-- DH SKILLS		(DH Female: 74706 | DH Male: 75207) -->
+
+		<!-- DH SENTRY -->
+
+		<!-- add map shape to DH SENTRY
+		no rune: 141402 / spitfire: 150025 / impaling: 150024 / tether: 168815 / polar: 150026 / guardian: 150027 -->
+		<DH_Sentry enabled="1" keywords="summoned_by_me,snos=141402|150025|150024|168815|150026|150027" extra_decorators="deco1/ground_circle,deco2/ground_circle,deco3/ground_circle">
+			<map_shape enabled="1" radius="5" ping_speed="0" shape="triangle" color="220,0,170,170" stroke="2" />
+		</DH_Sentry>
+
+		<!-- add ground label to DH WOLF BUFF / Wolf itself: 159098 -->
+		<DH_Wolf_Buff enabled="0" keywords="snos=74706|75207">
+			<ground_label enabled="1" offset_y="10" offset_x="10" offset_z="-0.1" on_screen="1" off_screen="1" use_bottom="1" text="WOLF HOWL">
+				<body enabled="1" color="220,0,150,200" stroke="0" />
+				<text font_family="verdana" font_size="7.0" font_color="220,255,255,255" font_bold="1" font_shadow="1">
+					<custom_shadow enabled="1" heavy="1" color="255,0,0,0" />
+				</text>
+				<border enabled="1" stroke="1.1" color="255,255,255,0" />
+			</ground_label>
+			<conditions active_buffs="365311/2" only_out_town="0" />
+		</DH_Wolf_Buff>
+
+		<!-- add ground circle/label to Marked For Death / Rune: Valley of Death: 230674 -->
+		<DH_Marked_For_Death_VoD enabled="1" keywords="snos=230674">
+			<ground_circle enabled="1" radius="15" color="80,150,255,50" stroke="2.5" dash="Dash" />
+			<ground_timer enabled="1" offset_z="0" radius="10" use_bottom="0" count_down="15">
+				<fill color="200,150,200,50" />
+			</ground_timer>
+		</DH_Marked_For_Death_VoD>
+
+		<!-- add TIMER labels to DH SKILLS -->
+
+		<!-- Sentry without Custom Engineering -->
+		<GTimer_Sentry_A enabled="1" template="cd_timer" keywords="summoned_by_me,snos=141402|150025|150024|168815|150026|150027">
+			<conditions inactive_buffs="208610/0" />
+			<ground_label enabled="1" offset_z="-5.2" use_bottom="0" count_down="30">
+				<!-- <body enabled="0" color="192,0,0,0" stroke="0" />
+				<text font_color="255,255,255,255" /> -->
+				<body enabled="1" color="220,0,50,200" stroke="0" />
+				<text font_size="8.0" font_color="220,255,255,255" font_bold="1" font_shadow="0" />
+				<border enabled="1" stroke="1.2" color="255,255,255,0" />
+			</ground_label>
+			<ground_timer enabled="0" offset_z="3" radius="20" use_bottom="1" count_down="30">
+				<fill color="160,240,148,32" />
+			</ground_timer>
+		</GTimer_Sentry_A>
+
+		<!-- Sentry with Custom Engineering -->
+		<GTimer_Sentry_B enabled="1" template="cd_timer" keywords="summoned_by_me,snos=141402|150025|150024|168815|150026|150027">
+			<conditions active_buffs="208610/0" />
+			<ground_label enabled="1" offset_z="-3.0" use_bottom="1" count_down="60">
+				<!-- <body enabled="0" color="192,0,0,0" stroke="0" />
+				<text font_color="255,255,255,255" /> -->
+				<body enabled="1" color="220,0,50,200" stroke="0" />
+				<text font_size="8.0" font_color="220,255,255,255" font_bold="1" font_shadow="0" />
+				<border enabled="1" stroke="1.2" color="255,255,255,0" />
+			</ground_label>
+			<ground_timer enabled="0" offset_z="3" radius="20" use_bottom="1" count_down="60">
+				<fill color="160,240,148,32" />
+			</ground_timer>
+		</GTimer_Sentry_B>
+
+		<!-- ==============================	-->
+
+		<!-- WD SKILLS		(WD Female: 6481 | WD Male: 6485) -->
+
+		<!-- add map shape & ground circle/label to WD Big Bad Voodoo --> 
+		<WD_BBV enabled="1" keywords="snos=117574|182276|182271|182283|182278">
+			<map_shape enabled="1" radius="5" ping_speed="0" shape="triangle" color="200,0,255,150" stroke="2.5" />
+			<ground_circle enabled="1" radius="33" ping_speed="0" color="150,255,255,255" stroke="1"/>
+			<ground_label enabled="1" on_screen="1" off_screen="1" use_bottom="0" text="BBV">
+				<body enabled="1" color="255,255,255,255" stroke="0" />
+				<text font_family="verdana" font_size="7" font_bold="1" font_shadow="0" font_color="255,0,0,0" />
+				<border enabled="1" stroke="1.5" color="255,0,0,0" />
+			</ground_label>
+		</WD_BBV>
+
+		<!-- add TIMER labels to WD SKILLS -->
+
+		<!-- Big Bad Voodoo without Jungle Drums -->
+		<GTimer_BBV_A enabled="1" template="cd_timer" keywords="summoned_by_me,snos=117574|182276|182278|182271|182283">
+			<conditions powers="witchdoctor_bigbadvoodoo/0,witchdoctor_bigbadvoodoo/2,witchdoctor_bigbadvoodoo/3,witchdoctor_bigbadvoodoo/4" />
+			<ground_label enabled="1" offset_z="-7.5" use_bottom="0" count_down="20">
+				<body enabled="1" color="255,255,255,255" stroke="0" />
+				<text font_size="8" font_bold="1" font_shadow="0" font_color="255,0,0,0">
+					<custom_shadow enabled="0" heavy="1" color="150,255,0,0" />
+				</text>
+				<border enabled="1" stroke="1.5" color="255,0,0,0" />
+			</ground_label>
+			<ground_timer enabled="1" offset_z="3" radius="20" use_bottom="1" count_down="20">
+				<fill color="220,100,200,100" />
+			</ground_timer>
+		</GTimer_BBV_A>
+
+		<!-- Big Bad Voodoo with Jungle Drums -->
+		<GTimer_BBV_B enabled="1" template="cd_timer" keywords="summoned_by_me,snos=117574|182276|182278|182271|182283">
+			<conditions powers="witchdoctor_bigbadvoodoo/1" />
+			<ground_label enabled="1" offset_z="-7.5" use_bottom="0" count_down="30">
+				<body enabled="1" color="255,255,255,255" stroke="0" />
+				<text font_size="8" font_bold="1" font_shadow="0" font_color="255,0,0,0">
+					<custom_shadow enabled="0" heavy="1" color="150,255,0,0" />
+				</text>
+				<border enabled="1" stroke="1.5" color="255,0,0,0" />
+			</ground_label>
+			<ground_timer enabled="1" offset_z="3" radius="20" use_bottom="1" count_down="30">
+				<fill color="220,100,200,100" />
+			</ground_timer>
+		</GTimer_BBV_B>
+
+		<!-- Spirit Walk without Jaunt -->
+		<GTimer_Spirit_Walk_A enabled="1" template="cd_timer" keywords="summoned_by_me,snos=107705|106584">
+			<conditions powers="witchdoctor_spiritwalk/0,witchdoctor_spiritwalk/2,witchdoctor_spiritwalk/3,witchdoctor_spiritwalk/4" />
+			<ground_label enabled="1" count_down="2">
+				<text font_color="255,255,150,255" />
+			</ground_label>
+			<ground_timer enabled="1" count_down="2">
+				<fill color="160,255,150,255" />
+			</ground_timer>
+		</GTimer_Spirit_Walk_A>
+
+		<!-- Spirit Walk with Jaunt -->
+		<GTimer_Spirit_Walk_B enabled="1" template="cd_timer" keywords="summoned_by_me,snos=107705|106584">
+			<conditions powers="witchdoctor_spiritwalk/1" />
+			<ground_label enabled="1" count_down="3">
+				<text font_color="255,255,150,255" />
+			</ground_label>
+			<ground_timer enabled="1" count_down="3">
+				<fill color="160,255,150,255" />
+			</ground_timer>
+		</GTimer_Spirit_Walk_B>
+
+		<!-- Piranhado -->
+		<GTimer_Piranhado_1 enabled="1" template="cd_timer" keywords="snos=357846">
+			<ground_label enabled="1" count_down="4">
+				<text font_color="255,255,255,50" />
+			</ground_label>
+			<ground_timer enabled="1" count_down="4">
+				<fill color="160,100,255,150" />
+			</ground_timer>
+		</GTimer_Piranhado_1>
+
+		<!-- ==============================	-->
+
+		<!-- WIZ SKILLS		(WIZ Female: 6526 | WIZ Male: 6544) -->
+
+		<!-- add map shape Wizard HYDRA: -->
+		<Wiz_Hydra enabled="1" keywords="summoned_by_me,snos=80745|81515|82109|325807|82972|83959" extra_decorators="deco1/ground_circle,deco2/ground_circle,deco3/ground_circle">
+			<map_shape enabled="1" radius="5" ping_speed="0" shape="triangle" color="220,255,100,100" stroke="2" />
+		</Wiz_Hydra>
+
+		<!-- add TIMER labels to WIZ SKILLS -->
+
+		<!-- Hydra -->
+		<GTimer_Hydra_1 enabled="1" template="cd_timer" keywords="summoned_by_me,snos=81515|81229|325807|83024|83959">
+			<ground_label enabled="1" offset_z="-7.5" use_bottom="0" count_down="15">
+				<body enabled="1" color="170,170,0,170" stroke="0" />
+				<text font_size="8.5" font_color="220,255,255,255" font_bold="1" font_shadow="0" />
+				<border enabled="1" stroke="1.5" color="255,255,255,255" />
+			</ground_label>
+			<ground_timer enabled="0" offset_z="3" radius="20" use_bottom="1" count_down="15">
+				<empty color="128,0,0,0" />
+				<fill color="230,255,50,50" />
+			</ground_timer>
+		</GTimer_Hydra_1>
+
+		<!-- Black Hole -->
+		<GTimer_Black_Hole_1 enabled="1" template="cd_timer" keywords="summoned_by_me,snos=341426|341411|341381|341396|341441">
+			<map_shape enabled="0" radius="4" ping_speed="0" shape="triangle" color="255,255,100,100" stroke="2" />
+			<ground_label enabled="1" offset_z="5.2" count_down="2" >
+				<text font_size="9.0" font_color="255,255,200,200" />
+			</ground_label>
+			<ground_timer enabled="0" offset_z="5.2" count_down="2">
+				<empty color="128,0,0,0" />
+				<fill color="230,255,50,50" />
+			</ground_timer>
+		</GTimer_Black_Hole_1>
+
+	</actors>
+
+</config>

@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<config>
+
+	<circles>
+
+		<!-- ^^^^^^^^^^ CRUSADER ^^^^^^^^^^ -->
+
+		<!-- Crusader / Condemn / Vacuum (Pull) -->
+		<circle_Crusader_Condemn2b enabled="1" center="me" radius="20">
+			<conditions powers="x1_crusader_condemn/1" only_out_town="1" />
+			<style color="60,255,180,50" stroke="2" dash="Dash" />
+		</circle_Crusader_Condemn2b>
+
+		<!-- Crusader / Shield Glare / All Runes -->
+		<circle_Crusader_ShieldGlare enabled="1" center="me" radius="30">
+			<conditions powers="x1_crusader_shieldglare/*" only_out_town="1" />
+			<style color="100,220,220,220" stroke="1" dash="Dash" />
+		</circle_Crusader_ShieldGlare>
+
+		<!-- ^^^^^^^^^^ DEMON HUNTER ^^^^^^^^^^ -->
+
+		<!-- Demon Hunter / Steady Aim / Passive -->
+		<circle_DH_SteadyAim enabled="1" center="me" radius="10">
+			<conditions powers="demonhunter_passive_steadyaim/*" only_out_town="1" />
+			<style color="100,0,250,150" stroke="1" dash="Dash" />
+		</circle_DH_SteadyAim>
+
+		<!-- ^^^^^^^^^^ MONK ^^^^^^^^^^ -->
+
+		<!-- Monk / Cyclone Strike / All Runes EXCEPT Implosion -->
+		<circle_Monk_CycloneStrike1 enabled="1" center="me" radius="24">
+			<conditions powers="monk_cyclonestrike/0, monk_cyclonestrike/2, monk_cyclonestrike/3, monk_cyclonestrike/4" only_out_town="1" />
+			<style color="60,150,150,0" stroke="2" />
+		</circle_Monk_CycloneStrike1>
+
+		<!-- Monk / Cyclone Strike / Implosion -->
+		<circle_Monk_CycloneStrike2 enabled="1" center="me" radius="34">
+			<conditions powers="monk_cyclonestrike/1" only_out_town="1" />
+			<style color="60,150,150,0" stroke="2" />
+		</circle_Monk_CycloneStrike2>
+
+		<!-- ^^^^^^^^^^ WITCH DOCTOR ^^^^^^^^^^ -->
+
+		<!-- Witch Doctor / Horrify / Face of Death -->
+		<circle_WD_Horrify2 enabled="1" center="me" radius="24">
+			<conditions powers="witchdoctor_horrify/*" only_out_town="1" />
+			<style color="160,220,200,0" stroke="2" />
+		</circle_WD_Horrify2>
+
+		<!-- EXPERIMENTAL!!! -->
+		<!-- Witch Doctor / Pickup Radius with Thing of the Deep -->
+		<circle_WD_Pickup enabled="0" center="me" radius="28">
+			<conditions powers="witchdoctor_passive_graveinjustice/*" only_out_town="1" />
+			<style color="60,0,50,255" stroke="2" />
+		</circle_WD_Pickup>
+
+	</circles>
+
+</config>

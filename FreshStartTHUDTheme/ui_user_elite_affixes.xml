@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+
+	<templates>
+
+		<good template="default" enabled="1">
+			<ground_label enabled="1" on_screen="1" off_screen="1">
+				<text enabled="1" font_family="tahoma" font_size="5.0" font_bold="0" font_color="255,255,255,255" />
+				<body enabled="1" color="255,0,128,00" />
+			</ground_label>
+		</good>
+		<weak template="default" enabled="1">
+			<ground_label enabled="1" on_screen="1" off_screen="1">
+				<text font_family="tahoma" font_size="5.0" font_bold="0" font_color="200,220,120,0" enabled="1" />
+				<body color="255,50,50,50" enabled="1" />
+			</ground_label>
+		</weak>
+		<attention template="default" enabled="1">
+			<ground_label enabled="1" on_screen="1" off_screen="1">
+				<text font_family="tahoma" font_size="7.0" font_bold="1" font_color="255,255,255,255" enabled="1" />
+				<body color="150,140,140,56" enabled="1" />
+			</ground_label>
+		</attention>
+		<danger template="default" enabled="1">
+			<ground_label enabled="1" on_screen="1" off_screen="1">
+				<text enabled="1" font_family="tahoma" font_size="7.0" font_bold="1" font_color="255,255,255,255" />
+				<body enabled="1" color="200,180,100,20" />
+			</ground_label>
+		</danger>
+		<announce template="default" enabled="1">
+			<ground_label enabled="1" on_screen="1" off_screen="1">
+				<text enabled="1" font_family="tahoma" font_size="7.0" font_bold="1" font_color="255,255,255,255" />
+				<body color="255,180,0,0" enabled="1" />
+			</ground_label>
+		</announce>
+		<superbad enabled="1" template="default">
+			<ground_label enabled="1" on_screen="1" off_screen="1">
+				<text enabled="1" font_family="tahoma" font_size="8.0" font_bold="1" font_color="255,255,255,255" />
+				<body color="255,0,0,0" enabled="1" />
+			</ground_label>
+		</superbad>
+		
+	</templates>
+	
+	<overrides>
+		<override_actors_monsters_affix enabled="1" file="ui_default_actors_monsters_affix" path="templates.default.enabled" value="0" />
+	</overrides>
+
+	<monsters>
+
+<!-- ================= BEGIN AFFIXES =============== -->
+	
+		<!-- elite affixes: superbad -->
+		<affix_firechains enabled="1" speech_text="" template="superbad" keywords="alive,firechains">
+			<ground_label enabled="1" on_screen="1" off_screen="1" text="Firechains" />
+		</affix_firechains>
+		<affix_ele_knockback enabled="1" speech_text="" template="superbad" keywords="alive,electrified,knockback">
+			<ground_label enabled="1" on_screen="1" off_screen="1" text="Ele+Knock" />
+		</affix_ele_knockback>
+		<affix_ele_nightmarish enabled="1" speech_text="" template="superbad" keywords="alive,electrified,nightmarish">
+			<ground_label enabled="1" on_screen="1" off_screen="1" text="Ele+Fear" />
+		</affix_ele_nightmarish>
+		<affix_molten enabled="1" speech_text="" template="superbad" keywords="alive,molten">
+			<ground_label enabled="1" on_screen="1" off_screen="1" text="Molten" />
+		</affix_molten>
+
+		<!-- elite affixes: announce -->
+		<affix_reflect enabled="1" speech_text="" template="announce" keywords="alive,reflect">
+			<ground_label enabled="1" on_screen="1" off_screen="1" text="Reflect" />
+		</affix_reflect>
+		<affix_electrified enabled="1" speech_text="" template="announce" keywords="alive,electrified">
+			<ground_label enabled="1" on_screen="1" off_screen="1" text="electrified" />
+		</affix_electrified>
+		
+		<!-- elite affixes: danger -->
+		<affix_jailer enabled="1" speech_text="" template="danger" keywords="alive,jailer">
+			<ground_label enabled="1" on_screen="1" off_screen="1" text="Jailer" />
+		</affix_jailer>
+		<affix_frozen enabled="1" speech_text="" template="danger" keywords="alive,frozen">
+			<ground_label enabled="1" on_screen="1" off_screen="1" text="Frozen" />
+		</affix_frozen>
+		<affix_thunderstorm enabled="1" speech_text="" template="danger" keywords="alive,thunderstorm">
+			<ground_label enabled="1" on_screen="1" off_screen="1" text="Thunderstorm" />
+		</affix_thunderstorm>
+		<affix_mortar enabled="1" speech_text="" template="danger" keywords="alive,mortar">
+			<ground_label enabled="1" on_screen="1" off_screen="1" text="Mortar" />
+		</affix_mortar>
+		<affix_vortex enabled="1" speech_text="" template="danger" keywords="alive,vortex">
+			<ground_label enabled="1" on_screen="1" off_screen="1" text="Vortex" />
+		</affix_vortex>
+		<affix_arcane enabled="1" speech_text="" template="danger" keywords="alive,arcane">
+			<ground_label enabled="1" on_screen="1" off_screen="1" text="Arcane" />
+		</affix_arcane>
+
+		<!-- elite affixes: attention -->
+		<affix_fast enabled="1" speech_text="" template="attention" keywords="alive,fast">
+			<ground_label enabled="1" on_screen="1" off_screen="1" text="Fast" />
+		</affix_fast>
+		<affix_plagued enabled="1" speech_text="" template="attention" keywords="alive,plagued">
+			<ground_label enabled="1" on_screen="1" off_screen="1" text="Plagued" />
+		</affix_plagued>
+		<affix_poison enabled="1" speech_text="" template="attention" keywords="alive,poison">
+			<ground_label enabled="1" on_screen="1" off_screen="1" text="Poison" />
+		</affix_poison>
+		<affix_frozenpulse enabled="1" speech_text="" template="attention" keywords="alive,frozenpulse">
+			<ground_label enabled="1" on_screen="1" off_screen="1" text="FrozenPulse" />
+		</affix_frozenpulse>
+		<affix_teleporter enabled="1" speech_text="" template="attention" keywords="alive,teleporter">
+			<ground_label enabled="1" on_screen="1" off_screen="1" text="Teleporter" />
+		</affix_teleporter>
+		<affix_desecrator enabled="1" speech_text="" template="attention" keywords="alive,desecrator">
+			<ground_label enabled="1" on_screen="1" off_screen="1" text="Desecrator" />
+		</affix_desecrator>
+		<affix_orbiter enabled="1" speech_text="" template="attention" keywords="alive,orbiter">
+			<ground_label enabled="1" on_screen="1" off_screen="1" text="Orbiter" />
+		</affix_orbiter>
+		
+		<!-- elite affixes: weak -->
+		<affix_missiledampening enabled="1" speech_text="" template="good" keywords="alive,missiledampening">
+			<ground_label enabled="1" on_screen="1" off_screen="1" text="MissileDamp" />
+		</affix_missiledampening>
+		<affix_avenger enabled="1" speech_text="" template="weak" keywords="alive,avenger">
+			<ground_label enabled="1" on_screen="1" off_screen="1" text="Avenger" />
+		</affix_avenger>
+		<affix_horde enabled="1" speech_text="" template="weak" keywords="alive,horde">
+			<ground_label enabled="1" on_screen="1" off_screen="1" text="Horde" />
+		</affix_horde>
+		<affix_knockback enabled="1" speech_text="" template="weak" keywords="alive,knockback">
+			<ground_label enabled="1" on_screen="1" off_screen="1" text="Knockback" />
+		</affix_knockback>
+		<affix_nightmarish enabled="1" speech_text="" template="weak" keywords="alive,nightmarish">
+			<ground_label enabled="1" on_screen="1" off_screen="1" text="Nightmarish" />
+		</affix_nightmarish>
+		<affix_wormhole enabled="1" speech_text="" template="weak" keywords="alive,wormhole">
+			<ground_label enabled="1" on_screen="1" off_screen="1" text="Wormhole" />
+		</affix_wormhole>
+		<affix_illusionist enabled="1" speech_text="" template="weak" keywords="alive,illusionist">
+			<ground_label enabled="1" on_screen="1" off_screen="1" text="Illusionist" />
+		</affix_illusionist>
+		<affix_waller enabled="1" speech_text="" template="weak" keywords="alive,waller">
+			<ground_label enabled="1" on_screen="1" off_screen="1" text="Waller" />
+		</affix_waller>
+		<affix_shielding enabled="1" speech_text="" template="weak" keywords="alive,shielding">
+			<ground_label enabled="1" on_screen="1" off_screen="1" text="Shielding" />
+		</affix_shielding>
+
+		<!-- elite affixes: good -->
+		<affix_healthlink enabled="1" speech_text="" template="good" keywords="alive,healthlink">
+			<ground_label enabled="1" on_screen="1" off_screen="1" text="HealthLink" />
+		</affix_healthlink>
+		
+	</monsters>
+
+</config>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<config>
+
+	<templates>
+		
+		<timer enabled="1">
+			<ground_label enabled="1" on_screen="1" off_screen="1" use_bottom="1" text="{value}" value_format="dyn">
+				<!-- value_format can be 'dyn', 'F0', 'F1' -->
+				<body enabled="0" color="192,0,0,0" stroke="0" />
+				<text font_family="tahoma" font_size="9" font_bold="1" font_shadow="1">
+					<custom_shadow enabled="1" heavy="1" color="128,0,0,0" />
+				</text>
+			</ground_label>
+
+			<ground_timer enabled="1" radius="30" use_bottom="1">
+				<empty enabled="1" color="64,0,0,0" stroke="0" />
+				<fill enabled="1" color="160,255,255,255" stroke="0" />
+			</ground_timer>
+		</timer>
+
+	</templates>
+
+	<actors>
+
+		<fetisharmy_timer enabled="1" template="timer" keywords="summoned_by_me,snos=87189|89933|89934|90072|409656|410238">
+			<ground_label offset_z="1" count_down="20">
+				<text font_size="10" font_color="255,255,255,255" />
+			</ground_label>
+
+			<ground_timer count_down="20" offset_z="1" radius="25">
+				<empty color="100,0,0,0" />
+				<fill color="100,255,255,255" />
+			</ground_timer>
+			<!-- only without zunimassa's -->
+			<conditions inactive_buffs="318778/*" />
+		</fetisharmy_timer>
+		
+	</actors>
+
+</config>

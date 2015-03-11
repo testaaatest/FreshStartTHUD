@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+
+	<!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+	<!-- *.txt files are not loaded automatically by TurboHUD          -->
+	<!-- you have to change this file's extension to .xml to enable it -->
+	<!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+	<monsters>
+
+		<jailer enabled="1" keywords="alive,jailer">
+			<ground_circle enabled="1" radius="60" ping_speed="0" color="64,255,0,0" stroke="7" dash="Dash"/>
+			<map_shape enabled="1" radius="60" shape="circle" ping_speed="0" color="64,255,0,0" stroke="2" dash="Dash" noshadow="1" />
+		</jailer>
+
+		<vortex enabled="1" keywords="alive,vortex">
+			<ground_circle enabled="1" radius="62" ping_speed="0" color="64,255,0,0" stroke="7" dash="Dash"/>
+			<map_shape enabled="1" radius="62" shape="circle" ping_speed="0" color="64,255,0,0" stroke="2" dash="Dash" noshadow="1" />
+		</vortex>
+
+		<mortar enabled="1" keywords="alive,mortar">
+			<ground_circle enabled="1" radius="70" ping_speed="0" color="64,255,0,0" stroke="7" dash="Dash"/>
+			<map_shape enabled="1" radius="70" shape="circle" ping_speed="0" color="64,255,0,0" stroke="2" dash="Dash" noshadow="1" />
+		</mortar>
+
+		<frozen enabled="1" keywords="alive,frozen">
+			<ground_circle enabled="1" radius="65" ping_speed="0" color="64,255,0,0" stroke="7" dash="Dash"/>
+			<map_shape enabled="1" radius="65" shape="circle" ping_speed="0" color="64,255,0,0" stroke="2" dash="Dash" noshadow="1" />
+		</frozen>
+
+		<thunderstorm enabled="1" keywords="alive,thunderstorm">
+			<ground_circle enabled="1" radius="62" ping_speed="0" color="64,255,0,0" stroke="7" dash="Dash"/>
+			<map_shape enabled="1" radius="62" shape="circle" ping_speed="0" color="64,255,0,0" stroke="2" dash="Dash" noshadow="1" />
+		</thunderstorm>
+
+	</monsters>
+
+</config>

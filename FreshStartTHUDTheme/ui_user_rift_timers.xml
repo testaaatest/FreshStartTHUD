@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<config>
+
+	<overrides>
+	
+		<!-- disable Normal Rift Info Percent -->
+		<override_RiftInfoPct1 enabled="1" file="ui_default_labels_utility" path="labels.rift_info_pct.enabled" value="0" />
+
+		<!-- disable Greater Rift Info Percent -->
+		<override_GRiftInfoPct1 enabled="1" file="ui_default_labels_utility" path="labels.greater_rift_info_pct.enabled" value="0" />
+
+		<!-- disable Greater Rift Info Timer -->
+		<override_GRiftInfoTimer1 enabled="1" file="ui_default_labels_utility" path="labels.greater_rift_info_timer.enabled" value="0" />
+
+		<!-- disable Rift Orbs drops / Re-added as <ACTORS> -->
+		<override_RiftOrb enabled="1" file="ui_default_actors" path="actors.rift_orb.enabled" value="0" />
+
+	</overrides>
+
+	<labels>
+
+		<!-- add %INFO to Normal Rift progress bar -->
+		<rift_info_pct enabled="1" expression="*rift-info-pct" hint="">
+			<position x="5" y="0" w="90" h="100" container="Root.NormalLayer.eventtext_bkgrnd.eventtext_region.stackpanel.rift_wrapper.rift_container.rift_progress_bar" />
+			<title font_family="verdana" font_size="7.5" font_color="255,255,255,255" font_bold="0" font_shadow="1" font_halign="Left">
+				<custom_shadow enabled="1" heavy="1" color="255,0,0,0" />
+			</title>
+			<conditions only_rift="1" />
+		</rift_info_pct>
+
+		<!-- add TIMER to Normal Rift progress bar -->
+		<rift_info_timer enabled="0" expression="*greater-rift-timer" hint="">
+			<position x="5" y="0" w="90" h="100" container="Root.NormalLayer.eventtext_bkgrnd.eventtext_region.stackpanel.rift_wrapper.rift_container.rift_progress_bar" />
+			<title font_family="verdana" font_size="7.5" font_color="255,255,255,255" font_bold="0" font_shadow="1" font_halign="Right">
+				<custom_shadow enabled="1" heavy="1" color="255,0,0,0" />
+			</title>
+			<conditions only_rift="1" />
+		</rift_info_timer>
+
+		<!-- add %INFO to Greater Rift progress bar -->
+		<greater_rift_info_pct enabled="1" expression="*greater-rift-info-pct" hint="">
+			<position x="5" y="0" w="90" h="100" container="Root.NormalLayer.eventtext_bkgrnd.eventtext_region.stackpanel.rift_wrapper.greater_rift_container.rift_progress_bar" />
+			<title font_family="verdana" font_size="7.5" font_color="255,255,255,255" font_bold="0" font_shadow="1" font_halign="Left">
+				<custom_shadow enabled="1" heavy="1" color="255,0,0,0" />
+			</title>
+			<conditions only_greater_rift="1" />
+		</greater_rift_info_pct>
+
+		<!-- add TIMER to Greater Rift progress bar -->
+		<greater_rift_info_timer enabled="1" expression="*greater-rift-timer" hint="">
+			<position x="5" y="0" w="90" h="100" container="Root.NormalLayer.eventtext_bkgrnd.eventtext_region.stackpanel.rift_wrapper.greater_rift_container.rift_progress_bar" />
+			<title font_family="verdana" font_size="7.5" font_color="255,255,255,255" font_bold="0" font_shadow="1" font_halign="Right">
+				<custom_shadow enabled="1" heavy="1" color="255,0,0,0" />
+			</title>
+			<conditions only_greater_rift="1" />
+		</greater_rift_info_timer>
+
+	</labels>
+
+</config>

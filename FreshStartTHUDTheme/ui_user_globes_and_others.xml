@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<config>
+
+	<overrides>
+
+		<!-- disable Power Globe -->
+		<override_PowerGlobe enabled="1" file="ui_default_actors" path="actors.power_globe.enabled" value="0" />
+
+		<!-- disable SUMMONED ACTORS: Hydra -->
+		<override_Hydra_MM_Disable enabled="1" file="ui_default_actors_skills" path="actors.hydra.enabled" value="0" />
+
+		<!-- disable SUMMONED ACTORS: Sentry -->
+		<override_Sentry_MM_Disable enabled="1" file="ui_default_actors_skills" path="actors.sentry.enabled" value="0" />
+
+		<!-- disable TIMERS for SUMMONED ACTORS -->
+		<override_Timer_Disable enabled="1" file="ui_default_actors_skill_timers" path="templates.timer.enabled" value="0" />
+	
+	</overrides>
+
+	<actors>
+
+		<!-- mark Blood Shard drops on minimap & ground: 359504	-->
+		<Mark_Blood_Shard enabled="1" keywords="snos=359504">
+			<map_shape enabled="1" radius="1" ping_speed="0" shape="circle" color="255,230,0,0" stroke="0" />
+			<ground_circle enabled="1" radius="1" color="100,50,225,225" />
+			<ground_label enabled="1" on_screen="1" off_screen="1" offset_z="-3" use_bottom="0" text="Blood Shard">
+				<body enabled="1" color="100,230,0,0" stroke="0" />
+				<text font_family="verdana" font_size="7.5" font_bold="0" font_color="200,255,255,255" font_shadow="0" />
+			</ground_label>
+		</Mark_Blood_Shard>
+
+		<!-- mark HP Globe drops on minimap & ground / Health Globe: 4267 -->
+		<!-- small green circle -->
+		<Mark_HP_Globe enabled="1" keywords="snos=4267">
+			<map_shape enabled="1" radius="2.0" ping_speed="500" shape="circle" color="200,0,225,200" stroke="0" />
+			<ground_circle enabled="1" radius="0.75" color="150,100,200,100" />
+		</Mark_HP_Globe>
+
+		<!-- mark HP Globe drops on minimap & ground (/w  DH's Blood Vengeance skill equipped) -->
+		<!-- faster blinking & thin black outline on minimap / red circle in green circle on ground --> 
+		<Mark_HP_Globe_BV enabled="1" keywords="snos=4267" extra_decorators="deco1/map_shape,deco2/ground_circle">
+			<map_shape enabled="1" radius="3.0" ping_speed="300" shape="circle" color="200,0,225,200" stroke="0" />
+			<deco1 enabled="1" radius="4.0" ping_speed="300" shape="circle" color="200,0,0,0" stroke="0.2" />
+			<ground_circle enabled="1" radius="1.0" color="180,100,200,100" stroke="0" />
+			<deco2 enabled="1" radius="0.45" color="200,255,0,0" stroke="0" />
+			<conditions active_buffs="155714/0" />
+		</Mark_HP_Globe_BV>
+
+		<!-- mark HP Globe drops on minimap & ground (/w Reaper's Wraps bracers equipped) -->
+		<!-- faster blinking & thin black outline on minimap / black ring in green circle on ground --> 
+		<Mark_HP_Globe_RW enabled="1" keywords="snos=4267" extra_decorators="deco1/map_shape,deco2/ground_circle">
+			<map_shape enabled="1" radius="3.0" ping_speed="300" shape="circle" color="200,0,225,200" stroke="0" />
+			<deco1 enabled="1" radius="4.0" ping_speed="300" shape="circle" color="200,0,0,0" stroke="0.2" />
+			<ground_circle enabled="1" radius="1.15" color="180,100,200,100" stroke="0" />
+			<deco2 enabled="1" radius="0.75" color="180,0,0,0" stroke="1.2" />
+			<conditions active_buffs="318818/0" />
+		</Mark_HP_Globe_RW>
+
+		<!-- mark Power Orb drops on minimap & ground / Power Globe: 301283 -->
+		<Mark_Power_Orb enabled="1" speech_text="" keywords="power_globe">
+			<map_shape enabled="1" radius="5.8" ping_speed="0" shape="circle" color="255,240,240,120" stroke="0" />
+			<ground_circle enabled="1" radius="0.75" color="150,50,225,225" />
+			<ground_label enabled="1" on_screen="0" off_screen="1" text="default">
+				<body enabled="1" color="255,240,240,120" stroke="0" />
+				<text font_family="verdana" font_size="7" font_color="255,0,0,0" font_bold="1" font_shadow="0" />
+			</ground_label>
+		</Mark_Power_Orb>
+
+		<!-- mark Rift Orb drops on minimap & ground / Rift Orb: 401751 -->
+		<Mark_Rift_Orb enabled="1" speech_text="" keywords="rift_orb">
+			<map_shape enabled="1" radius="5.8" ping_speed="0" shape="circle" color="255,255,0,255" stroke="0" />
+			<ground_circle enabled="1" radius="0.9" color="150,50,225,225" />
+			<ground_label enabled="1" on_screen="1" off_screen="1" text="O R B">
+				<body enabled="1" color="255,230,0,0" stroke="0" />
+				<text font_family="verdana" font_size="7.5" font_bold="0" font_color="255,255,255,255" font_shadow="0" />
+			</ground_label>
+		</Mark_Rift_Orb>
+
+	</actors>
+
+</config>

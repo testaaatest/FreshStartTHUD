@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+
+	<!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+	<!-- *.txt files are not loaded automatically by TurboHUD          -->
+	<!-- you have to change this file's extension to .xml to enable it -->
+	<!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+	<overrides>
+
+		<a enabled="1" file="ui_default_labels_damage_bonus">
+			<o1 path="templates.default.enabled" value="0" />
+		</a>
+
+	</overrides>
+
+</config>

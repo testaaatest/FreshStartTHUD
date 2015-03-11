@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<config>
+
+	<templates>
+
+		<default enabled="1" zone="attributes">
+			<position y="34.0" w="3.5" h="11.5" container="Root.NormalLayer.game_dialog_backgroundScreenPC.game_window_hud_overlay" />
+			<body enabled="1" color="160,0,0,0" stroke="0" />
+			<border enabled="1" color="80,0,0,0" stroke="1.5" />
+			<title font_family="verdana" font_size="6.7" font_bold="0" font_color="255,255,255,255" font_shadow="0" font_halign="Center" />
+		</default>
+
+	</templates>
+
+	<labels>
+
+		<!-- TAG: Nemesis Bracers Buff -->
+		<Tag_Nemesis_Bracers enabled="1" template="default" expression="NEMESIS Bracers ON" hint="">
+			<position x="44.0" y="-100" w="12" h="11.4" />
+			<body enabled="1" color="200,150,0,100" />
+			<title enabled="1" font_family="verdana" font_color="255,255,255,0" font_bold="1" font_shadow="1" font_halign="Center">
+				<custom_shadow enabled="1" heavy="1" color="255,0,0,0" />
+			</title>
+			<conditions enabled="1" active_buffs="318820/*" />
+		</Tag_Nemesis_Bracers>
+
+	</labels>
+
+</config>

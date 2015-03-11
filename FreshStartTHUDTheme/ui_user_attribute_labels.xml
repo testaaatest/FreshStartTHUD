@@ -1,0 +1,407 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<config>
+
+	<overrides>
+	
+		<!-- Disable All Portrait features -->
+		<override_Disable_Portrait1 enabled="0" file="ui_default_main" path="portraits.enabled" value="0" />
+
+		<!-- Disable Portrait eHP Bar (multiplayer only) -->
+		<override_Disable_Portrait_EHP_Bar1 enabled="1" file="ui_default_main" path="portraits.bars.ehp.enabled" value="0" />
+
+		<!-- Disable Portrait Damage counters / Re-added as <LABELS> on Attributes Bar -->
+
+		<!-- Disable Portrait Real DPS -->
+		<override_Disable_Portrait_Real_DPS1 enabled="1" file="ui_default_main" path="portraits.performance.real_dps.enabled" value="0" />
+
+		<!-- Disable Portrait Average DPS  -->
+		<override_Disable_Portrait_Avg_DPS1 enabled="1" file="ui_default_main" path="portraits.performance.run_dps.enabled" value="0" />
+
+		<!-- Disable Portrait Total Damage -->
+		<override_Disable_Portrait_Total_Dmg1 enabled="1" file="ui_default_main" path="portraits.performance.total_dmg.enabled" value="0" />
+
+	</overrides>
+
+	<!-- =========================	-->
+	<!--	TEMPLATES				-->
+	<!-- =========================	-->
+
+	<templates>
+
+		<!-- Add new templates for ATTRIBUTES BAR (Labels) -->
+		<default enabled="1" zone="attributes">
+			<position y="34.0" w="3.5" h="11.5" container="Root.NormalLayer.game_dialog_backgroundScreenPC.game_window_hud_overlay" />
+			<body enabled="1" color="160,0,0,0" stroke="0" />
+			<border enabled="1" color="80,0,0,0" stroke="1.5" />
+			<title font_family="verdana" font_size="6.7" font_bold="0" font_color="255,255,255,255" font_shadow="0" font_halign="Center" />
+		</default>
+
+		<details enabled="1" template="default">
+			<title font_color="255,255,200,100" font_shadow="0" />
+		</details>
+
+		<details_title enabled="1" template="details">
+			<title font_halign="Left" />
+		</details_title>
+
+	</templates>
+
+	<overrides>
+		
+		<!-- free inventory slots -->
+		<a enabled="1" file="ui_default_labels_utility">
+			<o1 path="labels.inventory_free_space_red.enabled" value="0" />
+			<o2 path="labels.inventory_free_space_yellow.enabled" value="0" />
+			<o3 path="labels.inventory_free_space_green.enabled" value="0" />
+		</a>
+
+		<!-- blood shard count -->
+		<bloodshard_count enabled="1" file="ui_default_labels_utility">
+			<o1 path="labels.token_blood_shard_red.enabled" value="0" />
+			<o2 path="labels.token_blood_shard_yellow.enabled" value="0" />
+			<o3 path="labels.token_blood_shard_green.enabled" value="0" />
+		</bloodshard_count>
+		
+		<!-- enable ATTRIBUTES bar [above skill bar] (in default theme) -->
+		<override_AttribBar enabled="1" file="ui_default_labels_attributes" path="templates.default.enabled" value="1" />
+
+		<!-- disable ACTIVATOR of ATTRIBUTES bar -->
+		<override_AttribBar_Activator enabled="1" file="ui_default_labels_attributes" path="activators.activator.enabled" value="0" />
+
+		<!-- enable HUD Text Mouseover Hint -->
+		<override_HUDTextMOHint enabled="1" file="ui_default_main" path="cursor_hint.enabled" value="1" />
+
+		<!-- disable EXP over Bar / re-added as <LABELS> -->
+		<override_EXPoverBar_A enabled="1" file="ui_default_labels_utility" path="labels.exp_over_bar_a.enabled" value="0" />
+		<override_EXPoverBar_B enabled="1" file="ui_default_labels_utility" path="labels.exp_over_bar_b.enabled" value="0" />
+
+		<!-- disable Skill DPS Info & Skill Cooldown Timers -->
+		<override_Skill_DPS enabled="0" file="ui_default_powers" path="templates.default.enable_skill_dps" value="0" />
+		<override_Skill_CD enabled="0" file="ui_default_powers" path="templates.default.enabled" value="0" />
+
+		<!-- disable HOVER LABELS -->
+		<override_AttribBar_Hover_Labels1 enabled="1" file="ui_default_labels_attributes" path="templates.details.enabled" value="0" />
+		<!-- disable CDR (left of buff icons) -->
+		<override_AttribBar_CDR1 enabled="1" file="ui_default_labels_attributes" path="labels.cdr.enabled" value="0" />
+		<!-- disable EHP -->
+		<override_AttribBar_EHP1 enabled="1" file="ui_default_labels_attributes" path="labels.ehp_max.enabled" value="0" />
+		<!-- disable DAMAGE REDUCED BY % // Removed -->
+		<override_AttribBar_DmgReducedPct1 enabled="1" file="ui_default_labels_attributes" path="labels.dmgred.enabled" value="0" />
+		<!-- disable ARMOR -->
+		<override_AttribBar_Armor1 enabled="1" file="ui_default_labels_attributes" path="labels.armor.enabled" value="0" />
+		<!-- disable ALL RESIST (lowest) -->
+		<override_AttribBar_AllRes1 enabled="1" file="ui_default_labels_attributes" path="labels.allres.enabled" value="0" />
+		<!-- disable EXP BONUS % // Removed -->
+		<override_AttribBar_EXPBonus1 enabled="1" file="ui_default_labels_attributes" path="labels.experience_bonus.enabled" value="0" />
+		<!-- disable MAGIC FIND % // Removed -->
+		<override_AttribBar_MF1 enabled="1" file="ui_default_labels_attributes" path="labels.magic_find.enabled" value="0" />
+		<!-- disable GOLD FIND % -->
+		<override_AttribBar_GF1 enabled="1" file="ui_default_labels_attributes" path="labels.gold_find.enabled" value="0" />
+		<!-- disable WEAPON DAMAGE // Removed -->
+		<override_AttribBar_WeaponDmg1 enabled="1" file="ui_default_labels_attributes" path="labels.weapon_dmg.enabled" value="0" />
+		<!-- disable ATTACKS per SECOND -->
+		<override_AttribBar_AttackSpeed1 enabled="1" file="ui_default_labels_attributes" path="labels.attackspeed.enabled" value="0" />
+		<!-- disable CRITICAL HIT CHANCE -->
+		<override_AttribBar_CritChance1 enabled="1" file="ui_default_labels_attributes" path="labels.critchance.enabled" value="0" />
+		<!-- disable SHEET DPS -->
+		<override_AttribBar_SheetDPS1 enabled="1" file="ui_default_labels_attributes" path="labels.sheet_dps.enabled" value="0" />
+		<!-- disable SHEET DPS -->
+		<override_AttribBar_Pets_APS1 enabled="1" file="ui_default_labels_attributes" path="labels.attackspeed_pets.enabled" value="0" />
+		<!-- disable experience on kill -->
+		<override_experience_on_kill enabled="1" file="ui_default_labels_attributes" path="labels.experience_on_kill.enabled" value="0" />
+
+	</overrides>
+
+	<!-- =========================	-->
+	<!--	LABLES					-->
+	<!-- =========================	-->
+
+	<labels>
+
+		<!-- Movement Speed (left of Buff Icons) -->
+		<Movement_Speed enabled="1" template="default" expression="*movespeed" hint="Movement Speed %">
+			<position w="3.7" x="25.8" y="20.3" h="11.5" />
+			<!-- <body enabled="1" color="180,50,180,220" /> -->
+			<body enabled="1" color="160,50,180,220" />
+			<border enabled="1" stroke="0.8" />
+			<title enabled="1" font_size="6.3" font_color="255,0,0,0" font_bold="1" font_shadow="0">
+				<custom_shadow enabled="0" heavy="0" color="20,0,0,0" />
+			</title>
+			<conditions only_out_town="0" />
+		</Movement_Speed>
+
+		<!-- ==============================	-->
+
+		<!-- Blood Shards -->
+		<token_blood_shard_red enabled="1" template="default" expression="*token-blood-shard-red" hint="Amount of Blood Shards">
+			<!-- <position x="37.7" /> -->
+			<position w="3.1" x="33.7" />
+			<!-- <body color="200,0,100,0" /> -->
+			<body color="160,255,100,210" />
+			<title font_color="255,255,255,255" font_shadow="1" />
+		</token_blood_shard_red>
+
+		<token_blood_shard_yellow enabled="1" template="default" expression="*token-blood-shard-yellow" hint="Amount of Blood Shards">
+			<!-- <position x="37.7" /> -->
+			<position w="3.1" x="33.7" />
+			<!-- <body color="200,0,100,0" /> -->
+			<body color="160,255,100,210" />
+			<title font_color="255,255,255,255" font_shadow="1" />
+		</token_blood_shard_yellow>
+
+		<token_blood_shard_green enabled="1" template="default" expression="*token-blood-shard-green" hint="Amount of Blood Shards">
+			<!-- <position x="37.7" /> -->
+			<position w="3.1" x="33.7" />
+			<!-- <body color="200,0,100,0" /> -->
+			<body color="160,255,100,210" />
+			<title font_color="255,255,255,255" font_shadow="1" />
+		</token_blood_shard_green>
+
+		<!-- Inventory -->
+		<Inventory enabled="1" template="default" expression="*inventory-free-space" hint="Inventory Space">
+			<!-- <position x="34.2" /> -->
+			<position w="3.5" x="30.15" />
+			<!-- <body color="160,0,0,0" /> -->
+			<body color="160,220,200,0" />
+			<title font_color="255,0,0,0" />
+		</Inventory>
+
+		<!-- Bonus XP -->
+		<Bonus_XP enabled="1" template="default" expression="*expbonus" hint="Bonus Experience">
+			<!-- <position x="27.2" /> -->
+			<position w="3.4" x="26.6" />
+				<!-- <body color="150,0,0,0" /> -->
+			<body color="255,57,107,235" />
+			<title font_color="255,255,255,255" />
+		</Bonus_XP>
+
+		<!-- Gold Find % -->
+		<Gold_Find enabled="1" template="default" expression="*pickup" hint="Pickup Radius">
+			<!-- <position x="51.9" /> -->
+			<position w="3.8" x="36.75" />
+			<!-- <body color="255,223,164,21" /> -->
+			<body color="160,220,200,0" />
+			<title font_color="255,0,0,0" />
+		</Gold_Find> 
+
+		<!-- Cooldown Reduction (CDR) -->
+		<CD_Reduction enabled="1" template="default" expression="*cdr" hint="Cooldown Reduction">
+			<position w="3.3" x="40.65" />
+		<!-- <position w="3.3" x="71" y="20.3" h="11.5" /> -->
+			<!-- <body enabled="1" color="255,255,255,255" /> -->
+			<body color="170,200,200,200" />
+			<border enabled="1" />
+			<title enabled="1" font_size="6.8" font_color="255,0,0,0" font_bold="0" font_shadow="0">
+					<custom_shadow enabled="0" heavy="0" color="20,0,0,0" />
+			</title>
+			<conditions only_out_town="0" />
+		</CD_Reduction>
+
+		<!-- ==============================	-->
+
+		 <!-- Current DPS -->
+		<Cur_DPS enabled="1" template="default" expression="*dps-cur" hint="Current DPS">
+			<position w="3.6" h="11.8" y="33.5" x="44.31" />
+			<border enabled="1" color="150,255,150,0" />
+			<!-- <body color="255,100,0,230" /> -->
+			<body color="230,10,0,25" />
+			<!-- <title font_size="8" font_color="255,255,255,255" font_bold="0" font_shadow="0"> -->
+			<title font_size="8" font_color="255,255,200,150" font_bold="0" font_shadow="0">
+				<custom_shadow enabled="1" heavy="1" color="200,0,0,0" />
+			</title>
+		</Cur_DPS>
+
+		 <!-- Average DPS -->
+		<Avg_DPS enabled="1" template="default" expression="*dps-run" hint="Average DPS">
+			<position w="3.85" h="11.8" y="33.5" x="48.10" />
+			<border enabled="1" color="150,255,150,0" />
+			<!-- <body color="255,170,10,255" /> -->
+			<body color="230,15,10,25" />
+			<!-- <title font_size="8" font_color="255,255,255,255" font_bold="0" font_shadow="0"> -->
+			<title font_size="8" font_color="255,255,200,50" font_bold="0" font_shadow="0">
+				<custom_shadow enabled="1" heavy="1" color="200,0,0,0" />
+			</title>
+		</Avg_DPS>
+
+		 <!-- Total Damage -->
+		<Total_Damage enabled="1" template="default" expression="*dmg-total" hint="Total Damage">
+			<position w="3.9" h="11.8" y="33.5" x="52.1" />
+			<border enabled="1" color="150,255,150,0" />
+			<!-- <body color="255,200,50,100" /> -->
+			<body color="230,20,5,10" />
+			<!-- <title font_size="8" font_color="255,255,255,255" font_bold="0" font_shadow="0"> -->
+			<title font_size="8" font_color="255,255,150,150" font_bold="0" font_shadow="0">
+				<custom_shadow enabled="1" heavy="1" color="200,0,0,0" />
+			</title>
+		</Total_Damage>
+
+		<!-- ==============================	-->
+
+		<!-- Elite DPS -->
+		<Elite_DPS enabled="1" template="default" expression="*elite-dps" hint="Elite DPS">
+		<!-- <position x="65.8" y="22.0" /> -->
+			<position w="3.3" x="56.2" />
+			<!-- <body color="170,220,100,180" /> -->
+			<body color="160,255,100,210" />
+			<title font_color="255,0,0,0" font_bold="1" font_shadow="0" />
+			<conditions only_out_town="0" />
+		</Elite_DPS>
+
+		<!-- Attacks Per Second -->
+		<Attack_Speed enabled="1" template="default" expression="*attackspeed" hint="Attacks Per Second">
+			<!-- <position x="69.4" y="22.0" /> -->
+			<position w="3.3" x="59.6" />
+			<!-- <body color="170,100,10,20" /> -->
+			<body color="180,50,10,10" />
+			<title font_color="255,220,200,100" />
+		</Attack_Speed>
+
+		<!-- Critical Hit Chance -->
+		<Crit_Chance enabled="1" template="default" expression="*critchance" hint="Critical Hit Chance">
+			<!-- <position x="62.4" /> -->
+			<position w="3.3" x="63.05" />
+			<!-- <body color="130,180,30,60" /> -->
+			<body color="180,140,20,20" />
+			<title font_color="255,255,255,100" />
+		</Crit_Chance>
+
+		<!-- Critial Damage -->
+		<Critical_Damage enabled="1" template="default" expression="*critdamage" hint="Critial Damage">
+			<!-- <position x="65.9" /> -->
+			<position w="3.9" x="66.4" />
+			<body color="160,70,10,10" />
+			<title font_color="225,255,250,220" font_bold="0" font_shadow="0" />
+		</Critical_Damage>
+
+		<!-- Sheet DPS -->
+		<Sheet_DPS enabled="1" template="default" expression="*dps-sheet" hint="">
+			<!-- <position x="69.4" /> -->
+			<position w="3.1" x="70.3" />
+			<body color="180,180,20,0" />
+			<title font_color="255,255,255,255" font_bold="0" font_shadow="1" />
+		</Sheet_DPS>
+
+		<!-- ==============================	-->
+
+		<!-- MOUSEOVER LABELS @ Sheet DPS -->
+
+		<!-- SHEET DPS Details -->
+		<Sheet_DPS_Title enabled="1" template="details_title" expression="Sheet DPS">
+			<position x="73.8" y="34" w="8" h="11.5" />
+			<body enabled="1" color="220,0,0,0" />
+			<title enabled="1" font_color="255,255,200,100" font_bold="0" font_shadow="1" font_halign="Left" />
+			<conditions mouse_near="70.3,34.0,3.1,11.5" only_idle="1" />
+		</Sheet_DPS_Title>
+
+		<!-- ATTACKS PER SECOND -->
+			<!-- Details -->
+		<Attacks_Per_Sec_Detail enabled="1" template="details" expression="*attackspeed">
+			<position x="70.2" y="22.5" />
+			<body enabled="1" color="220,0,0,0" />
+			<title enabled="1" font_color="255,255,100,100" font_bold="0" font_shadow="0" font_halign="Center" />
+			<conditions mouse_near="70.3,34.0,3.1,11.5" only_idle="1" />
+		</Attacks_Per_Sec_Detail>
+			<!-- Title -->
+		<Attacks_Per_Sec_Title enabled="1" template="details_title" expression="Attacks per Second">
+			<position x="73.8" y="22.5" w="8.5" />
+			<body enabled="1" color="220,0,0,0" />
+			<conditions mouse_near="70.3,34.0,3.1,11.5" only_idle="1" />
+		</Attacks_Per_Sec_Title>
+
+		<!-- CRIT HIT CHANCE -->
+			<!-- Details -->
+		<Crit_Chance_Detail enabled="1" template="details" expression="*critchance">
+			<position x="70.2" y="11" />
+			<conditions mouse_near="70.3,34.0,3.1,11.5" only_idle="1" />
+		</Crit_Chance_Detail>
+			<!-- Title -->
+		<Crit_Chance_Title enabled="1" template="details_title" expression="Critical Hit Chance">
+			<position x="73.8" y="11" w="8.5" />
+			<body enabled="1" color="220,0,0,0" />
+			<conditions mouse_near="70.3,34.0,3.1,11.5" only_idle="1" />
+		</Crit_Chance_Title>
+
+		<!-- CRITICAL DAMAGE -->
+			<!-- Details -->
+		<Critical_Damage_Detail enabled="1" template="details" expression="*critdamage">
+			<position x="70.2" y="-0.5" />
+			<body enabled="1" color="220,50,0,0" />
+			<title enabled="1" font_color="255,255,225,0" font_bold="0" font_shadow="0" font_halign="Center" />
+			<conditions mouse_near="70.3,34.0,3.1,11.5" only_idle="1" />
+		</Critical_Damage_Detail>
+			<!-- Title -->
+		<Critical_Damage_Title enabled="1" template="details_title" expression="Critial Damage">
+			<position x="73.8" y="-0.5" w="8.5" />
+			<body enabled="1" color="220,0,0,0" />
+			<conditions mouse_near="70.3,34.0,3.1,11.5" only_idle="1" />
+		</Critical_Damage_Title>
+
+		<!-- WEAPON DAMAGE -->
+			<!-- Details -->
+		<Weapon_Damage_Detail enabled="1" template="details" expression="*dmg-weapon">
+			<position x="70.2" y="-12" />
+			<body enabled="1" color="220,0,0,0" />
+			<conditions mouse_near="70.3,34.0,3.1,11.5" only_idle="1" />
+		</Weapon_Damage_Detail>
+			<!-- Title -->
+		<Weapon_Damage_Title enabled="1" template="details_title" expression="Weapon Damage">
+			<position x="73.8" y="-12" w="8.5" />
+			<body enabled="1" color="220,0,0,0" />
+			<conditions mouse_near="70.3,34.0,3.1,11.5" only_idle="1" />
+		</Weapon_Damage_Title>
+
+		<!-- ELEMENTAL DPS -->
+			<!-- Details -->
+		<ELEMENTAL_DPS_Detail enabled="1" template="details" expression="*elemental-dps">
+			<position x="70.2" y="-23.5" />
+			<body enabled="1" color="220,0,90,200" />
+			<title enabled="1" font_color="255,255,255,0" font_bold="0" font_shadow="1" font_halign="Center" />
+			<conditions mouse_near="70.2,34.0,3.5,11.5" only_idle="1"/>
+		</ELEMENTAL_DPS_Detail>
+			<!-- Title -->
+		<ELEMENTAL_DPS_Title enabled="1" template="details_title" expression="Elemental DPS">
+			<position x="73.8" y="-23.5" w="8.5" />
+			<conditions mouse_near="70.2,34.0,3.5,11.5" only_idle="1" />
+		</ELEMENTAL_DPS_Title>
+
+		<!-- PETS ATTACKS PER SECOND w/ "Tasker & Theo" Gloves -->
+			<!-- Details -->
+		<PETS_APS_Detail enabled="1" template="details" expression="*attackspeed-pets">
+			<position x="70.2" y="-35" />
+			<body enabled="1" color="220,100,0,100" />
+			<title enabled="1" font_color="255,255,255,0" font_bold="0" font_shadow="1" font_halign="Center" />
+			<conditions mouse_near="70.2,34.0,3.5,11.5" only_idle="1" active_buffs="318731/0" />
+		</PETS_APS_Detail>
+			<!-- Title -->
+		<PETS_APS_Title enabled="1" template="details_title" expression="Pet APS (TnT)">
+			<position x="73.8" y="-35" w="8.5" />
+			<conditions mouse_near="70.2,34.0,3.5,11.5" only_idle="1" active_buffs="318731/0" />
+		</PETS_APS_Title>
+
+		<!-- ==============================	-->
+
+		<!-- MOUSEOVER LABELS @ Bonus Experience -->
+
+		<!-- EXPERIENCE ON KILL -->
+
+		<!-- Details -->
+		<Experience_On_Kill_Detail template="details" expression="*exponkill-plus">
+			<position x="26.15" y="-15" />
+			<body color="255,57,107,235" />
+			<title font_color="255,255,255,255" font_bold="0" font_shadow="1" font_halign="Center">
+					<custom_shadow enabled="1" heavy="1" color="255,0,0,0" />
+			</title>
+			<conditions mouse_near="26.6,34.0,3.5,11.5" only_idle="1"/>
+		</Experience_On_Kill_Detail>
+
+		<!-- Title -->
+		<Experience_On_Kill_Title template="details_title" expression="Experience on Kill">
+			<position x="29.9" y="-15" w="9.5" />
+			<body color="220,0,0,0" />
+			<conditions mouse_near="26.6,34.0,3.5,11.5" only_idle="1" />
+		</Experience_On_Kill_Title>
+
+	</labels>
+
+</config>

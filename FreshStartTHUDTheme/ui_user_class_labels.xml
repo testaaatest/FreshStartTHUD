@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<config>
+
+	<templates>
+
+		<!-- Add new templates for ATTRIBUTES BAR (Labels) -->
+		<default enabled="1" zone="attributes">
+			<position y="34.0" w="3.5" h="11.5" container="Root.NormalLayer.game_dialog_backgroundScreenPC.game_window_hud_overlay" />
+			<body enabled="1" color="160,0,0,0" stroke="0" />
+			<border enabled="1" color="80,0,0,0" stroke="1.5" />
+			<title font_family="verdana" font_size="6.7" font_bold="0" font_color="255,255,255,255" font_shadow="0" font_halign="Center" />
+		</default>
+	
+	</templates>
+	
+	<labels>
+
+		<!-- TAG: SWK Buff-->
+		<Tag_SWK enabled="1" template="default" expression="SWK Buff" hint="">
+			<position x="49.9" y="-135.3" w="5.2" h="11.5" />
+			<body color="200,200,200,50" />
+			<title font_family="verdana" font_size="7.5" font_color="255,0,0,0" font_bold="1" font_shadow="1" font_halign="Center">
+				<custom_shadow enabled="1" heavy="0" color="100,0,0,0" />
+			</title>
+			<conditions enabled="1" active_buffs="425390/*" />
+		</Tag_SWK>
+
+		<!-- ==============================	-->
+
+		<!-- TAG: DH Wolf Buff / On-Activation by anyone in Party -->
+		<Tag_DH_Wolf_Buff enabled="1" template="default" expression="WOLF HOWL" hint="">
+			<position x="43.35" y="-122" w="6.5" h="11.5" />
+			<body enabled="1" color="220,0,150,200" stroke="0" />
+			<title enabled="1" font_family="verdana" font_size="6.7" font_color="255,255,255,50" font_bold="1" font_shadow="1" font_halign="Center">
+				<custom_shadow enabled="1" heavy="1" color="255,0,0,0" />
+			</title>
+			<border enabled="1" stroke="1.5" color="255,255,255,50" />
+			<conditions enabled="1" active_buffs="365311/*" />
+		</Tag_DH_Wolf_Buff>
+
+		<!-- ==============================	-->
+
+		<!-- TAG: WD BBV Buff / Inside Radius -->
+		<Tag_WD_BBV_Buff enabled="1" template="default" expression="B.B.V." hint="">
+			<position x="49.95" y="-122" w="6.5" h="11.5" />
+			<body enabled="1" color="220,0,150,200" stroke="0" />
+			<title enabled="1" font_family="verdana" font_size="6.8" font_color="255,255,255,50" font_bold="1" font_shadow="1" font_halign="Center">
+				<custom_shadow enabled="1" heavy="1" color="255,0,0,0" />
+			</title>
+			<border enabled="1" stroke="1.5" color="255,255,255,50" />
+			<conditions enabled="1" active_buffs="117402/*" />
+		</Tag_WD_BBV_Buff>
+
+	</labels>
+
+</config>

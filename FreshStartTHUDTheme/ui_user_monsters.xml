@@ -1,0 +1,503 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<config>
+
+	<monsters>
+	
+		<!-- ranged: blue -->
+		<ranged_monsters enabled="1" speech_text="" keywords="alive,names=Quill Fiend|Fallen Shaman|Dark Skeletal Archer|Skeletal Ranger|Skeletal Ranger|Blood Clan Impaler|Blood Clan Spearman|Moon Clan Impaler|Moon Clan Spearman|Deranged Cultist|Summoned Archer|Returned Archer|Chilling Construct|Enraged Phantom|Grim Wraith|Foul Conjurer|Revenant Archer|Shadow of Death|Vile Revenant|Demonic Hellflyer|Hell Witch|Lashing Creeper|Subjugator|Vile Temptress|Blood Moon Sorcerer|Returned Summoner|Barbed Lurker|Dark Blood Moon Shaman|Ghastly Seraph|Toxic Lurker|Scouring Lobber|Dark Summoner|Soul Lasher|Exorcist|Arachnid Horror">
+			<map_shape enabled="1" radius="2" ping_speed="0" shape="circle" color="180,255,50,50" stroke="0" />
+			<ground_label enabled="1" on_screen="1" off_screen="1" text="default">
+				<body enabled="1" color="150,20,20,200" stroke="0" />
+				<text font_family="tahoma" font_size="6.5" font_bold="0" font_color="255,255,255,255" font_shadow="0" />
+			</ground_label>
+		</ranged_monsters>
+
+		<!-- Add Good Progress Monster Types -->
+		<override_Wretchedmother_Keywords enabled="1" file="ui_default_actors_monsters" path="monsters.wretchedmother.keywords" value="alive,names=Deathspitter|Retching Cadaver|Wretched Mother|Spewing Horror|Dust Eater|Moon Clan Warrior|Blood Moon Mauler|Unholy Thrall|Toxic Lurker|Sand Dweller|Disentombed Hulk|Unburied|Dark Vessel|Hungry Corpse" />
+
+		<!-- Add Bad Progress Monster Types -->
+		<override_Woodwraith_Keywords enabled="1" file="ui_default_actors_monsters" path="monsters.woodwraith.keywords" value="alive,names=Imp|Scavanger|Shadow Vermin|Stygian Crawler|Tormented Stinger|Fallen Soldier|Fallen Peon|Fallen" />
+	  
+		<!--  add TIMER to dead exploding grotesque / TEST / -->
+		<GTimer_Dead_Exploding_Grotesque enabled="1" speech_text="Booom" keywords="dead,snos=3847|218307|218308|365450|3848|218405|3849|113994|3850|195639|365465|191592">
+			<conditions only_greater_rift="1" />
+			<ground_label enabled="1" on_screen="1" off_screen="1" use_bottom="1" text="{value}" value_format="F1" count_down="2">
+				<body enabled="1" color="192,0,0,0" stroke="0" />
+				<text font_family="verdana" font_size="8" font_bold="1" font_shadow="1" font_color="255,255,255,0">
+					<custom_shadow enabled="1" heavy="1" color="255,0,0,0" />
+				</text>
+			</ground_label>
+			<ground_timer enabled="1" offset_z="0" radius="20" use_bottom="1" count_down="2">
+				<fill color="160,240,148,32" />
+			</ground_timer>
+		</GTimer_Dead_Exploding_Grotesque>
+
+		<!--  add TIMER to Undead mobs' death poison-gas explosion: Reviled|Accursed|Betrayed / TEST / -->
+		<GTimer_Dead_Posion_Explosion_Undead enabled="1" speech_text="" keywords="dead,snos=4104|4105|4106">
+			<conditions only_greater_rift="1" />
+			<ground_label enabled="1" on_screen="1" off_screen="1" use_bottom="1" text="{value}" value_format="F1" count_down="3">
+				<body enabled="1" color="192,0,0,0" stroke="0" />
+				<text font_family="verdana" font_size="8" font_bold="1" font_shadow="1" font_color="255,255,255,0">
+					<custom_shadow enabled="1" heavy="1" color="255,0,0,0" />
+				</text>
+			</ground_label>
+			<ground_timer enabled="1" offset_z="0" radius="20" use_bottom="1" count_down="3">
+				<fill color="160,240,148,32" />
+			</ground_timer>
+		</GTimer_Dead_Posion_Explosion_Undead>
+
+		<!-- add ground circle to Elites. (Only use 1 Elite Keyword at a time)
+		elite_all / elite_leader / elite_minion / elite_champion / elite_unique -->
+		<GCircle_Elite_Boss enabled="0" speech_text="" keywords="alive,boss">
+			<ground_circle enabled="1" radius="50" ping_speed="0" color="30,255,255,255" stroke="2" dash="Dash"/>
+		</GCircle_Elite_Boss>
+
+		<GCircle_Elite_Leader enabled="0" speech_text="" keywords="alive,elite_leader">
+			<ground_circle enabled="1" radius="50" ping_speed="0" color="30,255,255,255" stroke="2" dash="Dash"/>
+		</GCircle_Elite_Leader>
+
+		<GCircle_Elite_Champ enabled="0" speech_text="" keywords="alive,elite_champion">
+			<ground_circle enabled="1" radius="50" ping_speed="0" color="30,255,255,255" stroke="2" dash="Dash"/>
+		</GCircle_Elite_Champ>
+
+		<GCircle_Elite_Unique enabled="0" speech_text="" keywords="alive,elite_unique">
+			<ground_circle enabled="1" radius="50" ping_speed="0" color="30,255,255,255" stroke="2" dash="Dash"/>
+		</GCircle_Elite_Unique>
+		
+	</monsters>
+
+	<overrides>
+
+		<!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^	-->
+		<!--	MONSTERS			    -->
+		<!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^	-->
+
+		<!-- Dangerous Monster / disable / font -->
+		<override_DangerMonster_Disabled enabled="0" file="ui_default_actors_monsters" path="monsters.danger.enabled" value="0" />
+		<override_DangerMonster1 enabled="1" file="ui_default_actors_monsters" path="monsters.danger.ground_label.text.font_size" value="7" />
+
+		<!-- Add Dangerous Monster Types -->
+		<override_Danger_Keywords enabled="1" file="ui_default_actors_monsters" path="monsters.danger.keywords" value="alive,names=Fallen Lunatic|Deranged Fallen|Fallen Maniac|Frenzied Lunatic|Herald of Pestilence|Terror Demon|Demented Fallen|Savage Beast|Horned Charger|Great Horned Goliath|Skeletal Beast|Tusked Bogan|Corrupted Angel|Winged Assassin|Anarch|Exarch|Exorcist|Punisher|Executioner|Morlu|Death Maiden|Lacuni Huntress|Abomination|Grotesque|Horror|Smoldering Construct|Blazing Guardian|Lacuni Stalker|Enslaved Nightmare|Bogan Trapper|Accursed|Dune Stinger|Sand Wasp|Stinging Wasp" />
+
+		<!-- trash + visible / color -->
+		<override_TrashMonster1 enabled="1" file="ui_default_actors_monsters" path="monsters.trash.map_shape.color" value="200,200,200,200" />
+
+		<!-- wood wraith / enable / color -->
+		<override_WoodWraith1 enabled="1" file="ui_default_actors_monsters" path="monsters.woodwraith.enabled" value="1" />
+		<override_WoodWraith2 enabled="1" file="ui_default_actors_monsters" path="monsters.woodwraith.map_shape.color" value="200,255,215,0" />
+
+		<!-- wretched mother / enable / color -->
+		<override_WretchedMother1 enabled="1" file="ui_default_actors_monsters" path="monsters.wretchedmother.enabled" value="1" />
+		<override_WretchedMother2 enabled="1" file="ui_default_actors_monsters" path="monsters.wretchedmother.map_shape.color" value="180,0,180,0" />
+
+		<!-- betrayed on-death poison-gas / enable / radius -->
+		<override_dead_betrayed1 enabled="1" file="ui_default_actors_monsters" path="monsters.dead_betrayed.enabled" value="1" />
+		<override_dead_betrayed2 enabled="1" file="ui_default_actors_monsters" path="monsters.dead_betrayed.ground_circle.radius" value="4" />
+
+		<!-- Grotesque on-death explosion / color -->
+		<override_Grotesque_Circle_Color enabled="0" file="ui_default_actors_monsters" path="monsters.exploding_grotesque.ground_circle.color" value="255,255,255,153" />
+
+		<!-- disable minimap dots for Elite Champions -->
+		<override_Elite_Champion_Disabled enabled="0" file="ui_default_actors_monsters" path="monsters.elite_champion.enabled" value="0" />
+
+		<!-- disable minimap dots for Elite Leaders -->
+		<override_Elite_Leader_Disabled enabled="0" file="ui_default_actors_monsters" path="monsters.elite_leader.enabled" value="0" />
+
+		<!-- disable minimap dots for Elite Minions -->
+		<override_Elite_Minion_Disabled enabled="0" file="ui_default_actors_monsters" path="monsters.elite_minion.enabled" value="0" />
+
+		<!-- disable minimap dots for Unique Elites -->
+		<override_Elite_Unique_Disabled enabled="0" file="ui_default_actors_monsters" path="monsters.elite_unique.enabled" value="0" />
+
+
+		<!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^	-->
+		<!--	ELITE AFFIXES & SKILLS	-->
+		<!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^	-->
+
+		<!-- Elite Affix Weak / font & ground_label / transparency -->
+		<override_EliteAffixWeak1 enabled="1" file="ui_default_actors_monsters_affix" path="templates.weak.ground_label.text.font_size" value="8" />
+		<override_EliteAffixWeak2 enabled="1" file="ui_default_actors_monsters_affix" path="templates.weak.ground_label.text.font_color" value="180,225,150,0" />
+		<override_EliteAffixWeak3 enabled="1" file="ui_default_actors_monsters_affix" path="templates.weak.ground_label.text.font_bold" value="0" />
+		<override_EliteAffixWeak4 enabled="1" file="ui_default_actors_monsters_affix" path="templates.weak.ground_label.body.color" value="255,20,20,20" />
+		<override_EliteAffixWeak5 enabled="1" file="ui_default_actors_monsters_affix" path="templates.weak.ground_label.on_screen" value="1" />
+
+		<!-- Elite Affix Important / font & ground_label -->
+
+		<!-- label transparency -->
+		<override_EliteAffixImpAlpha1 enabled="1" file="ui_default_actors_monsters_affix" path="templates.important.ground_label.text.font_color" value="180,255,255,255" />
+
+		<!-- Frozen Pulse / change ground_label color -->
+		<override_EliteAffixImp1 enabled="1" file="ui_default_actors_monsters_affix" path="monsters.affix_frozenpulse.ground_label.body.color" value="255,50,50,255" />
+
+		<!-- Jailer / change ground_label color -->
+		<override_EliteAffixImp1 enabled="1" file="ui_default_actors_monsters_affix" path="monsters.affix_jailer.ground_label.body.color" value="255,200,0,100" />
+
+		<!-- Change default Molten affix text from Molten to M -->
+		<override_Change_Molten_Text enabled="0" file="ui_default_actors_monsters_affix" path="monsters.affix_molten.ground_label.text" value="M" />
+
+		<!-- Change Molten color -->
+		<override_Change_Molten_Color enabled="0" file="ui_default_actors_skills" path="actors.molten.ground_circle.color" value="255,255,255,153" />
+
+		<!-- Make Knockback affix Important / label color / speech -->
+		<override_Knockback_Important enabled="0" file="ui_default_actors_monsters_affix" path="monsters.affix_knockback.template" value="important" />
+		<override_Knockback_Imp_Color enabled="0" file="ui_default_actors_monsters_affix" path="monsters.affix_knockback.ground_label.body.color" value="255,255,0,0" />
+		<override_Knockback_Speech enabled="0" file="ui_default_actors_monsters_affix" path="monsters.affix_knockback.speech_text" value="Knockback" />
+
+		<!-- Make Nightmarish affix Important / label color / speech -->
+		<override_Nightmarish_Important enabled="0" file="ui_default_actors_monsters_affix" path="monsters.affix_nightmarish.template" value="important" />
+		<override_Nightmarish_Imp_Color enabled="0" file="ui_default_actors_monsters_affix" path="monsters.affix_nightmarish.ground_label.body.color" value="255,255,0,0" />
+		<override_Nightmarish_Speech enabled="0" file="ui_default_actors_monsters_affix" path="monsters.affix_nightmarish.speech_text" value="Nightmare" />
+
+		<!-- Disable AFFIX Effect Circles -->
+
+		<!-- Arcane -->
+		<override_Disable_Arcane_Circle enabled="0" file="ui_default_actors_skills" path="actors.arcane.ground_circle.enabled" value="0" />
+
+		<!-- Desecrator -->
+		<override_Disable_Desecrator_Circle enabled="0" file="ui_default_actors_skills" path="actors.desecrator.ground_circle.enabled" value="0" />
+
+		<!-- Plagued -->
+		<override_Disable_Plagued_Circle1 enabled="0" file="ui_default_actors_skills" path="actors.plagued.ground_circle.enabled" value="0" />
+		<override_Disable_Plagued_Circle2 enabled="0" file="ui_default_actors_skills" path="actors.plagued.deco_outline.enabled" value="0" />
+
+		<!-- Molten -->
+		<override_Disable_Molten_Circle enabled="0" file="ui_default_actors_skills" path="actors.molten.ground_circle.enabled" value="0" />
+
+	</overrides>
+
+	<actors>
+
+		<!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^	-->
+		<!--	MONSTER SKILLS	     	-->
+		<!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^	-->
+
+		<!-- ******************************************	-->
+		<!-- 	Rift Guardian/Boss EFFECTS				-->
+		<!-- ******************************************	-->
+
+		<!-- add ground circle to RiftGuardian Tornado/EnergyTwister (Sand Shaper) -->
+		<GCircle_RG_Tornado_ET enabled="1" keywords="snos=139741">
+			<ground_circle enabled="1" radius="10" stroke="2" dash="Dash" color="160,255,50,50" />
+		</GCircle_RG_Tornado_ET>
+
+		<!-- add ground circle to RiftGuardian AOE DOT Poison (The Choker) -->
+		<GCircle_RG_AOE_Poison enabled="1" keywords="snos=360046">
+			<ground_circle enabled="1" radius="10" stroke="2" dash="Dash" color="160,255,50,50" />
+		</GCircle_RG_AOE_Poison>
+
+		<!-- add ground circle to RiftGuardian Fire Pentagram: Impact: 159163 / AOE DOT Fire: 359693 -->
+		<GCircle_RG_Fire_Pentagram enabled="1" keywords="snos=159163|359693">
+			<ground_circle enabled="1" radius="11.5" stroke="5" dash="Dash" color="120,255,255,255" />
+		</GCircle_RG_Fire_Pentagram>
+
+		<!-- add ground circle to RiftGuardian's Dangerous skills:
+		Gas Cloud (Ghom): 93837 /  Falling Rocks (Perendi): 368453|374732 / Falling Rocks: 3026	-->
+		<GCircle_RG_Dangerous_Skills1 enabled="1" keywords="snos=93837|368453|374732|3026">
+			<ground_circle enabled="1" radius="20" stroke="2" dash="Dash" color="160,255,50,50" />
+		</GCircle_RG_Dangerous_Skills1>
+
+		<!-- add ground circle to RiftGuardian's Ice Circles (Rime) -->
+		<GCircle_RG_Rime_Ice1 enabled="1" keywords="snos=359703">
+			<ground_circle enabled="1" color="100,0,100,255" radius="12" stroke="2" dash="Dash" />
+		</GCircle_RG_Rime_Ice1>
+
+		<GCircle_RG_Rime_Ice2 enabled="1" keywords="snos=363356">
+			<ground_circle enabled="1" color="100,0,100,255" radius="22" stroke="2" dash="Dash" />
+		</GCircle_RG_Rime_Ice2>
+
+		<!-- ==============================	-->
+
+		<!-- add ground circle to Diablo Ring of Fire -->
+		<GCircle_Diablo_Ring_of_Fire enabled="1" keywords="snos=226350">
+			<ground_circle enabled="1" radius="15" stroke="3" dash="Dash" color="160,255,50,50" />
+		</GCircle_Diablo_Ring_of_Fire>
+
+		<!-- track Maghda/Uber Maghda Punish Projectile -->
+		<GCircle_Maghda_Punish_Projectile enabled="1" keywords="snos=278340">
+			<ground_circle enabled="1" radius="0.8" stroke="2" dash="Dash" color="160,255,50,50" />
+		</GCircle_Maghda_Punish_Projectile>
+
+		<!-- add ground circle to Zoltun Kulle SlowTime Bubble -->
+		<GCircle_ZK_SlowTime_Bubble enabled="1" keywords="snos=185924">
+			<ground_circle enabled="1" radius="20" stroke="2" dash="Dash" color="160,255,50,255" />
+		</GCircle_ZK_SlowTime_Bubble>
+
+
+		<!-- ******************************************	-->
+		<!-- 	Monster EFFECTS							-->
+		<!-- ******************************************	-->
+
+		<!-- add ground circle to giant Brute leap (A5): 289827 -->
+		<GCircle_Brute_Leap enabled="1" keywords="snos=289827">
+			<ground_circle enabled="1" radius="15" stroke="3" dash="Dash" color="220,255,50,50" />
+		</GCircle_Brute_Leap>
+
+		<!-- add ground circle to Projectiles (A5 mobs / A2 sand wasps: 5212|5215) 312942|353256 ?? -->
+		<GCircle_Projectiles enabled="1" keywords="snos=5212|5215|312942|353256">
+			<ground_circle enabled="1" radius="0.5" stroke="0" color="200,255,50,50" />
+		</GCircle_Projectiles>
+
+		<!-- add ground circle to WoodWraith Spore Cloud Emitter: 6578 -->
+		<GCircle_WoodWraith_Spore_Emitter enabled="1" keywords="snos=6578|4176">
+			<ground_circle enabled="1" radius="5" stroke="2" dash="Dash" color="160,255,0,255" />
+		</GCircle_WoodWraith_Spore_Emitter>
+
+		<!-- add ground circle to WoodWraith Spore: 5482 -->
+		<GCircle_WoodWraith_Spore enabled="1" keywords="snos=5482">
+			<ground_circle enabled="1" radius="5" stroke="2" dash="Dash" color="160,255,50,100" />
+		</GCircle_WoodWraith_Spore>
+
+		<!-- add ground circle to Morlu Incinerator Meteor (including RiftGuardian):
+		Pending: 159369 / Impact: 159368 / AfterBurn: 159367 -->
+		<GCircle_Morlu_Meteor enabled="1" keywords="snos=159369|159368|159367">
+			<ground_circle enabled="1" radius="20" stroke="3" dash="Dash" color="60,255,255,255" />
+		</GCircle_Morlu_Meteor>
+
+		<!-- add ground circle to Fireball/Arcane Projectiles: 
+		DemonFlyer: 108771, Impact: 160401 / SkeletonSummoner: 5392 / SkeletonMage: 5374 -->
+		<GCircle_Elemental_Projectile1 enabled="1" keywords="snos=108771|5392|5374">
+			<ground_circle enabled="1" radius="1" stroke="0" color="100,200,20,150" />
+		</GCircle_Elemental_Projectile1>
+
+
+		<!-- ******************************************	-->
+		<!-- 	Irregular Monster EFFECTS				-->
+		<!-- ******************************************	-->
+
+		<!-- add ground circle (off-center) to Smoldering Construct Fire Pool (A2): 432 -->
+		<GCircle_Smoldering_Pool enabled="1" keywords="snos=432">
+			<ground_circle enabled="1" radius="9" stroke="2.5" dash="Dash" color="160,255,10,10" />
+		</GCircle_Smoldering_Pool>
+
+
+		<!-- ******************************************	-->
+		<!-- 	Dangerous TRAPS/DEVICES					-->
+		<!-- ******************************************	-->
+
+		<!-- add ground shape/label to DEMONIC FORGE (A3): 185391|174900 -->
+		<Mark_Demonic_Forge enabled="1" keywords="snos=185391|174900">
+			<ground_circle enabled="1" radius="45" ping_speed="0" color="140,255,10,10" stroke="1.0" />
+			<ground_shape enabled="1" radius="45" ping_speed="0" shape="x" color="140,255,10,10" stroke="1.0" />
+			<ground_label enabled="1" on_screen="1" off_screen="1" text="CAUTION!">
+				<body enabled="1" color="255,0,0,0" stroke="0" />
+				<text font_family="verdana" font_size="7" font_bold="1" font_shadow="0" font_color="200,255,0,0" />
+			</ground_label>
+		</Mark_Demonic_Forge>
+
+		<!-- add ground shape/label to Battlefield DEMON MINE (A3): 118596 -->
+		<Mark_Demon_Mine enabled="1" keywords="snos=118596">
+			<ground_circle enabled="1" radius="9" ping_speed="0" color="130,255,10,10" stroke="1.0" />
+			<ground_shape enabled="1" radius="9" ping_speed="0" shape="x" color="130,255,10,10" stroke="1.0" />
+			<ground_label enabled="1" on_screen="1" off_screen="0" text="CAUTION!">
+				<body enabled="1" color="255,0,0,0" stroke="0" />
+				<text font_family="verdana" font_size="3" font_bold="1" font_shadow="0" font_color="200,255,0,0" />
+			</ground_label>
+		</Mark_Demon_Mine>
+
+		<!-- add ground shape/label to FURNACE WALL (A5): 355365 -->
+		<Mark_Furnace_Wall enabled="1" keywords="snos=355365">
+			<ground_shape enabled="1" radius="25" ping_speed="0" shape="x" color="150,255,10,10" stroke="1.5" />
+			<ground_label enabled="1" on_screen="1" off_screen="1" text="CAUTION!">
+				<body enabled="1" color="255,0,0,0" stroke="0" />
+				<text font_family="verdana" font_size="7" font_bold="1" font_shadow="0" font_color="255,255,0,0" />
+			</ground_label>
+		</Mark_Furnace_Wall>
+
+		<!-- add ground shape/label to FURNACE SPINNER (A5): 353821 -->
+		<Mark_Furnace_Spinner enabled="1" keywords="snos=353821">
+			<ground_shape enabled="1" radius="32" ping_speed="0" shape="x" color="150,255,10,10" stroke="1.5" />
+			<ground_label enabled="1" on_screen="1" off_screen="1" text="CAUTION!">
+				<body enabled="1" color="255,0,0,0" stroke="0" />
+				<text font_family="verdana" font_size="7" font_bold="1" font_shadow="0" font_color="255,255,0,0" />
+			</ground_label>
+		</Mark_Furnace_Spinner>
+
+		<!-- add ground shape/label to BIG FIRE GRATE (A1): 108012 -->
+		<Mark_Big_Fire_Grate enabled="1" keywords="snos=108012">
+			<ground_shape enabled="1" radius="25" ping_speed="0" shape="x" color="150,255,10,10" stroke="1.5" />
+			<ground_label enabled="1" on_screen="1" off_screen="1" text="CAUTION!">
+				<body enabled="1" color="255,0,0,0" stroke="0" />
+				<text font_family="verdana" font_size="7" font_bold="1" font_shadow="0" font_color="255,255,0,0" />
+			</ground_label>
+		</Mark_Big_Fire_Grate>
+
+		<!-- ==============================	-->
+
+		<!-- add ground shape/label to BOG FLOOR TRAP: 239487 -->
+		<Mark_Bog_Trap enabled="1" keywords="snos=239487">
+			<ground_shape enabled="1" radius="25" ping_speed="0" shape="x" color="150,255,10,10" stroke="1.5" />
+			<ground_label enabled="1" on_screen="1" off_screen="1" text="CAUTION!">
+				<body enabled="1" color="255,0,0,0" stroke="0" />
+				<text font_family="verdana" font_size="7" font_bold="1" font_shadow="0" font_color="255,255,0,0" />
+			</ground_label>
+		</Mark_Bog_Trap>
+
+		<!-- add ground shape/label to Bogan Trapper BEAR TRAP: 237062 / Projectile: 284752 -->
+		<Mark_Bog_Bear_Trap enabled="1" keywords="snos=237062|284752">
+			<ground_circle enabled="1" radius="3" ping_speed="0" color="150,255,10,10" stroke="1.5" />
+			<ground_shape enabled="1" radius="3" ping_speed="0" shape="x" color="150,255,10,10" stroke="1.5" />
+			<ground_label enabled="1" on_screen="1" off_screen="0" text="CAUTION!">
+				<body enabled="1" color="255,0,0,0" stroke="0" />
+				<text font_family="verdana" font_size="5" font_bold="1" font_shadow="0" font_color="255,255,0,0" />
+			</ground_label>
+		</Mark_Bog_Bear_Trap>
+
+		<!-- add ground shape/label to Oasis POISON PLANT: 59401 -->
+		<Mark_Oasis_Poison_Plant enabled="1" keywords="snos=59401">
+			<ground_circle enabled="1" radius="18" ping_speed="0" color="50,255,10,0" stroke="0.3" />
+			<ground_shape enabled="1" radius="18" ping_speed="0" shape="x" color="50,255,10,0" stroke="0.3" />
+			<ground_label enabled="1" on_screen="1" off_screen="0" text="CAUTION!">
+				<body enabled="1" color="180,0,0,0" stroke="0" />
+				<text font_family="verdana" font_size="6" font_bold="1" font_shadow="0" font_color="180,255,0,0" />
+			</ground_label>
+		</Mark_Oasis_Poison_Plant>
+
+		<!-- ==============================	-->
+
+		<!-- add ground shape/label to BLOOD SPRING (Bog/Marsh) | Small: 332924 -->
+		<Mark_Bog_Blood_Spring_S enabled="1" keywords="snos=332924">
+			<ground_circle enabled="1" radius="6" ping_speed="0" color="120,255,0,0" stroke="1" />
+			<ground_shape enabled="0" radius="6" ping_speed="0" shape="x" color="100,255,10,10" stroke="1" />
+			<ground_label enabled="1" on_screen="1" off_screen="0" text="!!!">
+				<body enabled="1" color="255,0,0,0" stroke="0" />
+				<text font_family="verdana" font_size="6" font_bold="1" font_shadow="0" font_color="255,255,0,0" />
+			</ground_label>
+		</Mark_Bog_Blood_Spring_S>
+
+		<!-- add ground shape/label to BLOOD SPRING (Bog/Marsh) | Med: 332922 -->
+		<Mark_Bog_Blood_Spring_M enabled="1" keywords="snos=332922">
+			<ground_circle enabled="1" radius="11" ping_speed="0" color="120,255,0,0" stroke="1" />
+			<ground_shape enabled="0" radius="11" ping_speed="0" shape="x" color="100,255,10,10" stroke="1" />
+			<ground_label enabled="1" on_screen="1" off_screen="0" text="!!!">
+				<body enabled="1" color="255,0,0,0" stroke="0" />
+				<text font_family="verdana" font_size="6" font_bold="1" font_shadow="0" font_color="255,255,0,0" />
+			</ground_label>
+		</Mark_Bog_Blood_Spring_M>
+
+		<!-- add ground shape/label to BLOOD SPRING (Bog/Marsh) | Large: 332923 -->
+		<Mark_Bog_Blood_Spring_L enabled="1" keywords="snos=332923">
+			<ground_circle enabled="1" radius="19" ping_speed="0" color="120,255,0,0" stroke="1" />
+			<ground_shape enabled="0" radius="19" ping_speed="0" shape="x" color="100,255,10,10" stroke="1" />
+			<ground_label enabled="1" on_screen="1" off_screen="0" text="!!!">
+				<body enabled="1" color="255,0,0,0" stroke="0" />
+				<text font_family="verdana" font_size="7" font_bold="1" font_shadow="0" font_color="255,255,0,0" />
+			</ground_label>
+		</Mark_Bog_Blood_Spring_L>
+
+
+		<!-- ******************************************	-->
+		<!-- 	ELITE AFFIX / TIMERS					-->
+		<!-- ******************************************	-->
+
+		<!-- add ground circle to FROZEN PULSE -->
+		<GCircle_Frozen_Pulse enabled="1" keywords="snos=349774" extra_decorators="deco_outline/ground_circle">
+			<ground_circle enabled="0" radius="14" ping_speed="0" color="100,200,200,255" stroke="0" dash="Dash" />
+			<deco_outline enabled="1" radius="14" ping_speed="0" color="100,200,200,255" stroke="3" dash="Dash" />
+		</GCircle_Frozen_Pulse>
+
+		<!-- add ground circle to POISON (poison grid/trail)
+		CorpseBomber Bomb Start: 340319 / CorpseBomber Projectile: 316389 -->
+		<GCircle_Poison_Trail enabled="1" keywords="snos=340319|316389" extra_decorators="deco_outline/ground_circle">
+			<ground_circle enabled="0" radius="3" ping_speed="0" color="100,100,255,100" stroke="0" dash="Dash" />
+			<deco_outline enabled="1" radius="3" ping_speed="0" color="100,100,255,100" stroke="3" dash="Dash" />
+			<ground_shape enabled="1" radius="4" ping_speed="0" shape="x" color="100,100,255,100" stroke="1.5" />
+		</GCircle_Poison_Trail>
+
+		<!-- ==============================	-->
+
+		<!--  add TIMER to Elite Affix: ARCANE sweeper (CONFIRMED) -->
+		<GTimer_Affix_Arcane enabled="1" speech_text="" keywords="snos=219702|221225|257306">
+			<ground_label enabled="1" on_screen="1" off_screen="0" use_bottom="1" text="{value}" value_format="F1" count_down="10">
+			  <body enabled="0" color="192,0,0,0" stroke="0" />
+			  <text font_family="verdana" font_size="18" font_bold="1" font_shadow="1" font_color="255,255,250,50">
+				<custom_shadow enabled="1" heavy="1" color="255,0,0,0" />
+			  </text>
+			</ground_label>
+			<ground_timer enabled="0" offset_z="3" radius="20" use_bottom="1" count_down="10">
+				<fill color="160,240,148,32" />
+			</ground_timer>
+		</GTimer_Affix_Arcane>
+
+		<!--  add TIMER to Elite Affix: MOLTEN explosion: 4803|4804|224225|247987 (CONFIRMED) -->
+		<GTimer_Affix_Molten enabled="1" speech_text="" keywords="snos=4803">
+			<ground_label enabled="1" on_screen="1" off_screen="0" use_bottom="1" text="{value}" value_format="F1" count_down="3">
+				<body enabled="0" color="192,0,0,0" stroke="0" />
+				<text font_family="verdana" font_size="20" font_bold="1" font_shadow="1" font_color="255,255,255,0">
+					<custom_shadow enabled="1" heavy="1" color="255,0,0,0" />
+				</text>
+			</ground_label>
+			<ground_timer enabled="0" offset_z="3" radius="20" use_bottom="1" count_down="3">
+				<fill color="160,240,148,32" />
+			</ground_timer>
+		</GTimer_Affix_Molten>
+
+		<!--  add TIMER to Elite Affix: FROZEN explosion (CONFIRMED) -->
+		<GTimer_Affix_Frozen enabled="1" speech_text="" keywords="snos=223675">
+			<ground_label enabled="1" on_screen="1" off_screen="0" use_bottom="1" text="{value}" value_format="F1" count_down="3">
+				<body enabled="0" color="192,0,0,0" stroke="0" />
+				<text font_family="verdana" font_size="20" font_bold="1" font_shadow="1" font_color="255,255,255,0">
+					<custom_shadow enabled="1" heavy="1" color="255,0,0,0" />
+				</text>
+			</ground_label>
+			<ground_timer enabled="0" offset_z="3" radius="20" use_bottom="1" count_down="3">
+				<fill color="160,240,148,32" />
+			</ground_timer>
+		</GTimer_Affix_Frozen>
+
+		<!--  add TIMER to Elite Affix: DESECRATOR pool (CONFIRMED) -->
+		<GTimer_Affix_Desecrator enabled="1" speech_text="" keywords="snos=84608">
+			<ground_label enabled="1" on_screen="1" off_screen="0" use_bottom="1" text="{value}" value_format="F1" count_down="12">
+				<body enabled="0" color="192,0,0,0" stroke="0" />
+				<text font_family="verdana" font_size="15" font_bold="1" font_shadow="1" font_color="255,255,255,0">
+					<custom_shadow enabled="1" heavy="1" color="255,0,0,0" />
+				</text>
+			</ground_label>
+			<ground_timer enabled="0" offset_z="3" radius="20" use_bottom="1" count_down="12">
+				<fill color="160,240,148,32" />
+			</ground_timer>
+		</GTimer_Affix_Desecrator>
+
+		<!--  add TIMER to Elite Affix: PLAGUED pool (also herald of pestilence): 108869|3865
+				Persists until Elite death -->
+		<GTimer_Affix_Plagued enabled="1" speech_text="" keywords="snos=108869|3865">
+			<ground_label enabled="1" on_screen="1" off_screen="0" use_bottom="1" text="{value}" value_format="F1" count_down="50">
+				<body enabled="0" color="192,0,0,0" stroke="0" />
+				<text font_family="verdana" font_size="15" font_bold="1" font_shadow="1" font_color="255,255,255,0">
+					<custom_shadow enabled="1" heavy="1" color="255,0,0,0" />
+				</text>
+			</ground_label>
+			<ground_timer enabled="0" offset_z="3" radius="20" use_bottom="1" count_down="50">
+				<fill color="160,240,148,32" />
+			</ground_timer>
+		</GTimer_Affix_Plagued>
+
+		<!--  add TIMER to Elite Affix: FROZEN PULSE swirl -->
+		<GTimer_Affix_FrozenPulse enabled="1" speech_text="" keywords="snos=349774">
+			<ground_label enabled="1" on_screen="1" off_screen="0" use_bottom="1" text="{value}" value_format="F1" count_down="15">
+				<body enabled="0" color="192,0,0,0" stroke="0" />
+				<text font_family="verdana" font_size="15" font_bold="1" font_shadow="1" font_color="255,255,255,0">
+					<custom_shadow enabled="1" heavy="1" color="255,0,0,0" />
+				</text>
+			</ground_label>
+			<ground_timer enabled="0" offset_z="3" radius="20" use_bottom="1" count_down="15">
+				<fill color="160,240,148,32" />
+			</ground_timer>
+		</GTimer_Affix_FrozenPulse>
+
+		<!--  add TIMER to Elite Affix: ORBITER orbs: Projectile 343539 / FocalPoint 343582 (CONFIRMED) -->
+		<GTimer_Affix_Orbiter enabled="1" speech_text="" keywords="snos=343539|343582">
+			<ground_label enabled="1" on_screen="1" off_screen="0" use_bottom="1" text="{value}" value_format="F1" count_down="15">
+				<body enabled="0" color="192,0,0,0" stroke="0" />
+				<text font_family="verdana" font_size="8" font_bold="1" font_shadow="1" font_color="255,255,255,0">
+					<custom_shadow enabled="1" heavy="1" color="255,0,0,0" />
+				</text>
+			</ground_label>
+			<ground_timer enabled="0" offset_z="3" radius="20" use_bottom="1" count_down="15">
+				<fill color="160,240,148,32" />
+			</ground_timer>
+		</GTimer_Affix_Orbiter>
+
+	</actors>
+
+</config>

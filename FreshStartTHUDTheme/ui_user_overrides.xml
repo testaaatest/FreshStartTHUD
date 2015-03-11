@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<config>
+
+	<overrides>
+
+		<!-- disable Pick Up Radius -->
+		<disable_pickup_radius enabled="0" file="ui_default_main" path="pickup_range.enabled" value="0" />
+		
+		<!-- disable Paragon Capture feature ? -->
+		<override_Capture_Paragon enabled="0" file="config" path="utility.paragon_capture.enabled" value="0" />
+
+		<!-- hide ip -->
+		<override_show_ip enabled="1" file="ui_default_labels_utility" path="labels.ingame_ip.enabled" value="0" />
+
+		<!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^	-->
+		<!--	STAT TRACKER		    -->
+		<!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^	-->
+
+		<!-- customize STAT TRACKER -->
+
+		<!-- width -->
+		<override_StatTracker_Width enabled="1" file="ui_default_main" path="stat_tracker.scale_width" value="125" />
+
+		<!-- enable columns -->
+		<override_StatTracker_Gold_Drop enabled="1" file="ui_default_main" path="stat_tracker.columns.gold_drop.enabled" value="1" />
+		<override_StatTracker_Kill_Total enabled="1" file="ui_default_main" path="stat_tracker.columns.kill_total.enabled" value="1" />
+		<override_StatTracker_Drop_All enabled="1" file="ui_default_main" path="stat_tracker.columns.drop_all.enabled" value="1" />
+		<override_StatTracker_Drop_White enabled="1" file="ui_default_main" path="stat_tracker.columns.drop_white.enabled" value="1" />
+		<override_StatTracker_Drop_Magic enabled="1" file="ui_default_main" path="stat_tracker.columns.drop_magic.enabled" value="1" />
+		<override_StatTracker_Drop_Rare enabled="1" file="ui_default_main" path="stat_tracker.columns.drop_rare.enabled" value="1" />
+
+	</overrides>
+
+</config>

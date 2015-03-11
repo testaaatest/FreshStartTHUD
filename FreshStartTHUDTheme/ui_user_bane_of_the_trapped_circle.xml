@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<config>
+
+	<circles>
+
+		<!-- Bane of the Powerful: 383014 -->
+
+		<!-- Bane of the Trapped: 403456 (Dmg/CC) | Rank 25: 403457 (-30% Slow Aura)-->
+		<circle_BaneOfTheTrapped enabled="1" center="me" radius="15">
+			<conditions active_buffs="403457/*" only_out_town="1" />
+			<style color="25,0,255,0" stroke="1.5" />
+		</circle_BaneOfTheTrapped>
+
+	</circles>
+
+</config>

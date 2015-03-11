@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<config>
+
+	<!-- =============================	-->
+	<!--   CONST | RUN STATS (Labels)	-->
+	<!-- =============================	-->
+
+	<constants>
+
+		<w value="8.1" />
+		<h value="1.95" />
+		<h0 value="1.5" />
+		<x0 value="51.0" />
+		<x1 value="59.9" />
+		<x2 value="67.9" />
+		<x3 value="75.9" />
+		<x4 value="83.9" />
+		<x5 value="91.9" />
+		<y0 value="77.4" />
+		<y1 value="79.0" />
+		<y2 value="80.9" />
+		<y3 value="82.8" />
+		<y4 value="84.7" />
+		<y5 value="88.5" />
+		<ys2 value="75.0" />
+		<ys3 value="73.1" />
+		<ys4 value="71.2" />
+		<ys5 value="67.3" />
+		<rect value="91.9,77.4,8.1,11.2" />
+
+	</constants>
+
+	<overrides>
+	
+		<!-- enable RUN STATS panel [bottom right corner] (in default theme) -->
+		<override_RunStatsPanel enabled="1" file="ui_default_labels_run_stats" path="templates.default.enabled" value="1" />
+
+		<!-- disable ACTIVATOR of RUN STATS panel -->
+		<override_RunStatsPanel_Activator enabled="1" file="ui_default_labels_run_stats" path="activators.activator.enabled" value="0" />
+
+		<!-- Stats Headers - Top & Side / font -->
+		<override_RunStats_Font1 enabled="1" file="ui_default_labels_run_stats" path="templates.default.title.font_size" value="8" />
+		<override_RunStats_Font2 enabled="1" file="ui_default_labels_run_stats" path="templates.header.title.font_size" value="8" />
+		<override_RunStats_Font3 enabled="1" file="ui_default_labels_run_stats" path="templates.row_header_town.title.font_size" value="8" />
+		<override_RunStats_Font4 enabled="1" file="ui_default_labels_run_stats" path="templates.row_header_area.title.font_size" value="8" />
+
+		<!-- Elite Kills - color -->
+		<override_RunStats_Elites1 enabled="1" file="ui_default_labels_run_stats" path="templates.elite_ph.body.color" value="220,150,50,200" />
+		<override_RunStats_Elites2 enabled="1" file="ui_default_labels_run_stats" path="templates.elite_ph.title.font_color" value="255,255,255,255" />
+
+		<!-- Legendaries - color -->
+		<override_RunStats_Legend1 enabled="1" file="ui_default_labels_run_stats" path="templates.legendary_ph.body.color" value="220,191,100,47" />
+		<override_RunStats_Legend2 enabled="1" file="ui_default_labels_run_stats" path="templates.legendary_ph.title.font_color" value="255,0,0,0" />
+		<override_RunStats_Legend3 enabled="1" file="ui_default_labels_run_stats" path="templates.legendary_ph.title.font_bold" value="1" />
+
+	</overrides>
+	
+	<!-- =========================	-->
+	<!--	TEMPLATES				-->
+	<!-- =========================	-->
+
+	<templates>
+
+		<!-- Add new templates for RUN STATS (Labels) -->
+		<default1 enabled="1" zone="run_stats">
+			<position w="::w" container="*window-rect-right" />
+			<title font_family="tahoma" font_size="8" font_bold="0" font_halign="Right" />
+		</default1>
+
+		<row_header_town enabled="1" template="default1">
+			<position x="::x2" w="::w" h="::h" />
+			<title font_size="8" font_color="255,255,255,255" font_shadow="1" >
+				<custom_shadow enabled="1" heavy="1" color="128,0,0,0" />
+			</title>
+			<conditions only_idle="1" mouse_near="::rect" only_in_town="1" />
+		</row_header_town>
+
+		<row_header_area enabled="1" template="default1">
+			<position x="::x0" w="::w" h="::h" />
+			<title font_size="8" font_color="255,255,255,255" font_shadow="1" >
+				<custom_shadow enabled="1" heavy="1" color="128,0,0,0" />
+			</title>
+			<conditions mouse_near="::rect" only_out_town="1" />
+		</row_header_area>
+
+		<cells enabled="1" template="default1">
+			<position h="::h" />
+			<border enabled="1" color="255,0,0,0" stroke="1" />
+		</cells>
+
+		<gold_ph enabled="1" template="cells">
+			<body color="220,220,220,0" />
+			<title font_color="255,0,0,0" font_bold="1" />
+			<conditions only_at_max_level="1" />
+		</gold_ph>
+
+		<gold_sum enabled="1" template="gold_ph">
+			<conditions only_idle="1" />
+		</gold_sum>
+
+	</templates>
+
+	<!-- =========================	-->
+	<!--	LABLES					-->
+	<!-- =========================	-->
+
+	<labels>
+
+		<!-- Add Gold Pickup labels to RUN STATS -->
+
+		<gold enabled="1" container="1" template="default1">
+			<info_town template="row_header_town" expression="gold">
+				<position y="::y5" />
+			</info_town>
+
+			<info_area template="row_header_area" expression="gold">
+				<position y="::y5" />
+			</info_area>
+
+			<!-- gold per hour -->
+			<ph container="1" template="gold_ph" >
+				<area_total expression="*stattracker.current_area_total.gold_pickup_per_hour" >
+					<position x="::x1" y="::y5" />
+					<conditions only_out_town="1" mouse_near="::rect" only_at_max_level="1" only_idle="1" />
+				</area_total>
+				
+				<area_current expression="*stattracker.current_area_currentrun.gold_pickup_per_hour" >
+					<position x="::x2" y="::y5" />
+					<conditions only_out_town="1" mouse_near="::rect" only_at_max_level="1" only_idle="1" />
+				</area_current>
+				
+				<session expression="*stattracker.current_session.gold_pickup_per_hour" >
+					<position x="::x3" y="::y5" />
+					<conditions only_at_max_level="1" mouse_near="::rect" only_idle="1" />
+				</session>
+				
+				<hero_today expression="*stattracker.hero_today.gold_pickup_per_hour" >
+					<position x="::x4" y="::y5" />
+					<conditions only_at_max_level="1" mouse_near="::rect" only_idle="1" />
+				</hero_today>
+				
+				<run expression="*stattracker.current_run.gold_pickup_per_hour" >
+					<position x="::x5" y="::y5" />
+					<conditions only_at_max_level="1" />
+				</run>
+			</ph>
+
+			<!-- gold sum -->
+			<sum container="1" template="gold_sum">
+				<area_total expression="*stattracker.current_area_total.gold_pickup" >
+					<position x="::x1" y="::ys5" />
+					<conditions only_out_town="1" mouse_near="::rect" only_at_max_level="1" />
+				</area_total>
+				
+				<area_current expression="*stattracker.current_area_currentrun.gold_pickup" >
+					<position x="::x2" y="::ys5" />
+					<conditions only_out_town="1" mouse_near="::rect" only_at_max_level="1" />
+				</area_current>
+				
+				<session expression="*stattracker.current_session.gold_pickup" >
+					<position x="::x3" y="::ys5" />
+					<conditions only_at_max_level="1" mouse_near="::rect" />
+				</session>
+				
+				<hero_today expression="*stattracker.hero_today.gold_pickup" >
+					<position x="::x4" y="::ys5" />
+					<conditions only_at_max_level="1" mouse_near="::rect" />
+				</hero_today>
+				
+				<run expression="*stattracker.current_run.gold_pickup" >
+					<position x="::x5" y="::ys5" />
+					<conditions only_at_max_level="1" mouse_near="::rect" />
+				</run>
+			</sum>
+		</gold>
+
+	</labels>
+
+</config>

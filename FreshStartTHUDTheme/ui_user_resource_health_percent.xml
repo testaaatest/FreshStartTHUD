@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<config>
+
+	<labels>
+
+		<!-- add current health % to HEALTH SPHERE -->
+		<hp_pct enabled="1" expression="*hp-cur-pct">
+			<position x="3" y="0" w="100" h="25" container="Root.NormalLayer.game_dialog_backgroundScreenPC.game_progressBar_healthBall" />
+			<title font_family="verdana" font_size="7.5" font_color="240,255,200,190" font_bold="1" font_shadow="1" font_halign="Center">
+				<custom_shadow enabled="1" heavy="1" color="240,0,0,0" />
+			</title>
+		</hp_pct>
+
+	</labels>
+	
+	<overrides>
+	
+		<!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^	-->
+		<!--	HEALTH SPHERE	     	-->
+		<!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^	-->
+
+		<!-- customize HP Template font -->
+		<override_HP_Template1 enabled="1" file="ui_default_labels_ball_of_health" path="templates.default.title.font_family" value="verdana" />
+		<override_HP_Template2 enabled="1" file="ui_default_labels_ball_of_health" path="templates.default.title.font_bold" value="1" />
+		<override_HP_Template3 enabled="1" file="ui_default_labels_ball_of_health" path="templates.default.title.font_shadow" value="1" />
+		<override_HP_Template4 enabled="1" file="ui_default_labels_ball_of_health" path="templates.default.title.font_halign" value="Center" />
+		<override_HP_Template_CS1 enabled="1" file="ui_default_labels_ball_of_health" path="templates.default.title.custom_shadow.enabled" value="1" />
+		<override_HP_Template_CS2 enabled="1" file="ui_default_labels_ball_of_health" path="templates.default.title.custom_shadow.heavy" value="0" />
+		<override_HP_Template_CS3 enabled="1" file="ui_default_labels_ball_of_health" path="templates.default.title.custom_shadow.color" value="240,0,0,0" />
+
+		<!-- ========================================	-->
+
+		<!-- enable CURRENT HP -->
+		<override_HP_Curr_Enable enabled="1" file="ui_default_labels_ball_of_health" path="labels.hp_cur.enabled" value="1" />
+
+		<!-- customize CURRENT HP -->
+		<override_HP_Curr1 enabled="1" file="ui_default_labels_ball_of_health" path="labels.hp_cur.position.x" value="15.5" />
+		<override_HP_Curr2 enabled="1" file="ui_default_labels_ball_of_health" path="labels.hp_cur.position.y" value="24" />
+		<override_HP_Curr3 enabled="1" file="ui_default_labels_ball_of_health" path="labels.hp_cur.title.font_size" value="10.5" />
+		<override_HP_Curr4 enabled="1" file="ui_default_labels_ball_of_health" path="labels.hp_cur.title.font_color" value="240,255,200,190" />
+
+		<!-- ========================================	-->
+
+		<!-- enable CURRENT EFFECTING HEALING -->
+		<override_HP_Heal enabled="1" file="ui_default_labels_ball_of_health" path="labels.healing_cur.enabled" value="1" />
+
+		<!-- customize CURRENT EFFECTING HEALING -->
+		<override_HP_Heal1 enabled="1" file="ui_default_labels_ball_of_health" path="labels.healing_cur.title.font_size" value="8.5" />
+		<override_HP_Heal2 enabled="1" file="ui_default_labels_ball_of_health" path="labels.healing_cur.position.x" value="26" />
+		<override_HP_Heal3 enabled="1" file="ui_default_labels_ball_of_health" path="labels.healing_cur.position.y" value="42" />
+		<override_HP_Heal4 enabled="1" file="ui_default_labels_ball_of_health" path="labels.healing_cur.position.h" value="20" />
+
+		<!-- ========================================	-->
+
+		<!-- enable CURRENT DAMAGE TAKEN -->
+		<override_HP_Dmg_Taken enabled="1" file="ui_default_labels_ball_of_health" path="labels.damage_taken_cur.enabled" value="1" />
+
+		<!-- customize CURRENT DAMAGE TAKEN -->
+		<override_HP_Dmg_Taken1 enabled="1" file="ui_default_labels_ball_of_health" path="labels.damage_taken_cur.title.font_size" value="8.5" />
+		<override_HP_Dmg_Taken2 enabled="1" file="ui_default_labels_ball_of_health" path="labels.damage_taken_cur.position.x" value="26" />
+		<override_HP_Dmg_Taken3 enabled="1" file="ui_default_labels_ball_of_health" path="labels.damage_taken_cur.position.y" value="55" />
+		<override_HP_Dmg_Taken4 enabled="1" file="ui_default_labels_ball_of_health" path="labels.damage_taken_cur.position.h" value="20" />
+
+		<!-- ========================================	-->
+
+		<!-- enable HP ACTIVE SHIELD over HP sphere -->
+		<override_HP_Shield enabled="1" file="ui_default_labels_ball_of_health" path="labels.shield.enabled" value="1" />
+
+		<!-- customize HP ACTIVE SHIELD -->
+		<override_HP_Shield1 enabled="1" file="ui_default_labels_ball_of_health" path="labels.shield.title.font_size" value="8" />
+		<override_HP_Shield2 enabled="1" file="ui_default_labels_ball_of_health" path="labels.shield.position.x" value="18" />
+		<override_HP_Shield3 enabled="1" file="ui_default_labels_ball_of_health" path="labels.shield.position.y" value="74" />
+		<override_HP_Shield4 enabled="1" file="ui_default_labels_ball_of_health" path="labels.shield.position.h" value="18" />
+		<override_HP_Shield5 enabled="1" file="ui_default_labels_ball_of_health" path="labels.shield.title.font_color" value="255,255,255,255" />
+		<override_HP_Shield6 enabled="1" file="ui_default_labels_ball_of_health" path="labels.shield.title.custom_shadow.enabled" value="1" />
+		<override_HP_Shield7 enabled="1" file="ui_default_labels_ball_of_health" path="labels.shield.title.custom_shadow.heavy" value="1" />
+		<override_HP_Shield8 enabled="1" file="ui_default_labels_ball_of_health" path="labels.shield.title.custom_shadow.color" value="255,0,0,0" />
+
+		<!-- customize RESOURCE Template font -->
+		<override_Resource_Template1 enabled="1" file="ui_default_labels_ball_of_resource" path="templates.default.title.font_family" value="verdana" />
+		<override_Resource_Template2 enabled="1" file="ui_default_labels_ball_of_resource" path="templates.default.title.font_size" value="11" />
+		<override_Resource_Template3 enabled="1" file="ui_default_labels_ball_of_resource" path="templates.default.title.font_bold" value="1" />
+		<override_Resource_Template4 enabled="1" file="ui_default_labels_ball_of_resource" path="templates.default.title.font_shadow" value="0" />
+		<override_Resource_Template_CS1 enabled="1" file="ui_default_labels_ball_of_resource" path="templates.default.title.custom_shadow.enabled" value="1" />
+		<override_Resource_Template_CS2 enabled="1" file="ui_default_labels_ball_of_resource" path="templates.default.title.custom_shadow.heavy" value="1" />
+		<override_Resource_Template_CS3 enabled="1" file="ui_default_labels_ball_of_resource" path="templates.default.title.custom_shadow.color" value="180,200,200,200" />
+
+		<!-- ========================================	-->
+
+		<!-- enable Resource % -->
+		<override_Res_Pct1 enabled="1" file="ui_default_labels_ball_of_resource" path="templates.percentages.enabled" value="1" />
+
+		<!-- customize Resource % -->
+		<override_Res_Pct2 enabled="1" file="ui_default_labels_ball_of_resource" path="templates.percentages.position.y" value="7" />
+		<override_Res_Pct3 enabled="1" file="ui_default_labels_ball_of_resource" path="templates.percentages.position.h" value="15" />
+		<override_Res_Pct4 enabled="1" file="ui_default_labels_ball_of_resource" path="templates.percentages.title.font_size" value="7.5" />
+
+		<!-- ========================================	-->
+
+		<!-- enable RESOURCE VALUE -->
+		<override_Resource_Values enabled="1" file="ui_default_labels_ball_of_resource" path="templates.values.enabled" value="1" />
+
+		<!-- customize RESOURCE VALUE per CLASS -->
+
+		<!-- ARCANE / Wizard -->
+		<override_Resource_Arcane1 enabled="0" file="ui_default_labels_ball_of_resource" path="labels.resource_arcane.position.x" value="0" />
+		<override_Resource_Arcane2 enabled="0" file="ui_default_labels_ball_of_resource" path="labels.resource_arcane.position.y" value="0" />
+		<override_Resource_Arcane3 enabled="0" file="ui_default_labels_ball_of_resource" path="labels.resource_arcane.position.w" value="100" />
+		<override_Resource_Arcane4 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_arcane.title.font_color" value="255,255,255,255" />
+		
+		<!-- create/customize custom shadow -->
+		<override_Resource_Arcane_CS1 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_arcane.title.custom_shadow.enabled" value="1" />
+		<override_Resource_Arcane_CS2 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_arcane.title.custom_shadow.heavy" value="1" />
+		<override_Resource_Arcane_CS3 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_arcane.title.custom_shadow.color" value="255,0,0,0" />
+
+		<!-- customize Resource % -->
+		<override_Res_Pct_Arcane enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_arcane_pct.title.font_color" value="255,255,255,255" />
+		
+		<!-- create/customize custom shadow -->
+		<override_Res_Pct_Arcane_CS1 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_arcane_pct.title.custom_shadow.enabled" value="1" />
+		<override_Res_Pct_Arcane_CS2 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_arcane_pct.title.custom_shadow.heavy" value="1" />
+		<override_Res_Pct_Arcane_CS3 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_arcane_pct.title.custom_shadow.color" value="255,0,0,0" />
+
+		<!-- MANA / Witch Doctor -->
+		<override_Resource_Mana1 enabled="0" file="ui_default_labels_ball_of_resource" path="labels.resource_mana.position.x" value="0" />
+		<override_Resource_Mana2 enabled="0" file="ui_default_labels_ball_of_resource" path="labels.resource_mana.position.y" value="0" />
+		<override_Resource_Mana3 enabled="0" file="ui_default_labels_ball_of_resource" path="labels.resource_mana.position.w" value="100" />
+		<override_Resource_Mana4 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_mana.title.font_color" value="255,255,255,255" />
+		
+		<!-- create/customize custom shadow -->
+		<override_Resource_Mana_CS1 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_mana.title.custom_shadow.enabled" value="1" />
+		<override_Resource_Mana_CS2 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_mana.title.custom_shadow.heavy" value="1" />
+		<override_Resource_Mana_CS3 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_mana.title.custom_shadow.color" value="255,0,0,0" />
+
+		<!-- customize Resource % -->
+		<override_Res_Pct_Mana enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_mana_pct.title.font_color" value="255,255,255,255" />
+		
+		<!-- create/customize custom shadow -->
+		<override_Res_Pct_Mana_CS1 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_mana_pct.title.custom_shadow.enabled" value="1" />
+		<override_Res_Pct_Mana_CS2 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_mana_pct.title.custom_shadow.heavy" value="1" />
+		<override_Res_Pct_Mana_CS3 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_mana_pct.title.custom_shadow.color" value="255,0,0,0" />
+
+		<!-- SPIRIT / Monk -->
+		<override_Resource_Spirit1 enabled="0" file="ui_default_labels_ball_of_resource" path="labels.resource_spirit.position.x" value="0" />
+		<override_Resource_Spirit2 enabled="0" file="ui_default_labels_ball_of_resource" path="labels.resource_spirit.position.y" value="0" />
+		<override_Resource_Spirit3 enabled="0" file="ui_default_labels_ball_of_resource" path="labels.resource_spirit.position.w" value="100" />
+		<override_Resource_Spirit4 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_spirit.title.font_color" value="255,0,0,0" />
+		
+		<!-- customize Resource % -->
+		<override_Res_Pct_Spirit enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_spirit_pct.title.font_color" value="255,0,0,0" />
+
+		<!-- FURY / Barbarian -->
+		<override_Resource_Fury1 enabled="0" file="ui_default_labels_ball_of_resource" path="labels.resource_fury.position.x" value="0" />
+		<override_Resource_Fury2 enabled="0" file="ui_default_labels_ball_of_resource" path="labels.resource_fury.position.y" value="0" />
+		<override_Resource_Fury3 enabled="0" file="ui_default_labels_ball_of_resource" path="labels.resource_fury.position.w" value="100" />
+		<override_Resource_Fury4 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_fury.title.font_color" value="255,0,0,0" />
+		
+		<!-- customize Resource % -->
+		<override_Res_Pct_Fury enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_fury_pct.title.font_color" value="255,0,0,0" />
+
+		<!-- HATRED / Demon Hunter -->
+		<override_Resource_Hatred1 enabled="0" file="ui_default_labels_ball_of_resource" path="labels.resource_hatred.position.x" value="0" />
+		<override_Resource_Hatred2 enabled="0" file="ui_default_labels_ball_of_resource" path="labels.resource_hatred.position.y" value="0" />
+		<override_Resource_Hatred3 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_hatred.position.w" value="45" />
+		<override_Resource_Hatred4 enabled="0" file="ui_default_labels_ball_of_resource" path="labels.resource_hatred.title.font_color" value="255,255,160,160" />
+		
+		<!-- create/customize custom shadow -->
+		<override_Resource_Hatred_CS1 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_hatred.title.custom_shadow.enabled" value="1" />
+		<override_Resource_Hatred_CS2 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_hatred.title.custom_shadow.heavy" value="1" />
+		<override_Resource_Hatred_CS3 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_hatred.title.custom_shadow.color" value="255,0,0,0" />
+
+		<!-- customize Resource % -->
+		<override_Res_Pct_Hatred1 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_hatred_pct.title.font_color" value="255,255,160,160" />
+		<override_Res_Pct_Hatred2 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_hatred_pct.title.font_size" value="6.5" />
+		<override_Res_Pct_Hatred3 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_hatred_pct.position.w" value="50" />
+		
+		<!-- create/customize custom shadow -->
+		<override_Res_Pct_Hatred_CS1 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_hatred_pct.title.custom_shadow.enabled" value="1" />
+		<override_Res_Pct_Hatred_CS2 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_hatred_pct.title.custom_shadow.heavy" value="1" />
+		<override_Res_Pct_Hatred_CS3 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_hatred_pct.title.custom_shadow.color" value="255,0,0,0" />
+
+		<!-- DISCIPLINE / Demon Hunter -->
+		<override_Resource_Discipline1 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_discipline.position.x" value="55" />
+		<override_Resource_Discipline2 enabled="0" file="ui_default_labels_ball_of_resource" path="labels.resource_discipline.position.y" value="0" />
+		<override_Resource_Discipline3 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_discipline.position.w" value="45" />
+		<override_Resource_Discipline4 enabled="0" file="ui_default_labels_ball_of_resource" path="labels.resource_discipline.title.font_color" value="255,160,160,255" />
+		
+		<!-- create/customize custom shadow -->
+		<override_Resource_Discipline_CS1 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_discipline.title.custom_shadow.enabled" value="1" />
+		<override_Resource_Discipline_CS2 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_discipline.title.custom_shadow.heavy" value="1" />
+		<override_Resource_Discipline_CS3 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_discipline.title.custom_shadow.color" value="255,0,0,0" />
+
+		<!-- customize Resource % -->
+		<override_Res_Pct_Discipline1 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_discipline_pct.title.font_color" value="255,160,160,255" />
+		<override_Res_Pct_Discipline2 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_discipline_pct.title.font_size" value="6.5" />
+		<override_Res_Pct_Discipline3 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_discipline_pct.position.x" value="51" />
+		
+		<!-- create/customize custom shadow -->
+		<override_Res_Pct_Discipline_CS1 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_discipline_pct.title.custom_shadow.enabled" value="1" />
+		<override_Res_Pct_Discipline_CS2 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_discipline_pct.title.custom_shadow.heavy" value="1" />
+		<override_Res_Pct_Discipline_CS3 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_discipline_pct.title.custom_shadow.color" value="255,0,0,0" />
+
+		<!-- WRATH / Crusader -->
+		<override_Resource_Wrath1 enabled="0" file="ui_default_labels_ball_of_resource" path="labels.resource_wrath.position.x" value="0" />
+		<override_Resource_Wrath2 enabled="0" file="ui_default_labels_ball_of_resource" path="labels.resource_wrath.position.y" value="0" />
+		<override_Resource_Wrath3 enabled="0" file="ui_default_labels_ball_of_resource" path="labels.resource_wrath.position.w" value="100" />
+		<override_Resource_Wrath4 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_wrath.title.font_color" value="255,0,0,0" />
+		
+		<!-- customize Resource % -->
+		<override_Res_Pct_Wrath enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_wrath_pct.title.font_color" value="255,0,0,0" />
+
+		<!-- ========================================	-->
+
+		<!-- enable RESOURCE REGEN -->
+		<override_Res_Regen_Values enabled="1" file="ui_default_labels_ball_of_resource" path="templates.regens.enabled" value="1" />
+
+		<!-- customize RESOURCE REGEN -->
+
+		<!-- ARCANE REGEN / Wizard -->
+		<override_Res_Regen_Arcane1 enabled="0" file="ui_default_labels_ball_of_resource" path="labels.resource_arcane_reg.position.x" value="0" />
+		<override_Res_Regen_Arcane2 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_arcane_reg.position.y" value="50" />
+		<override_Res_Regen_Arcane3 enabled="0" file="ui_default_labels_ball_of_resource" path="labels.resource_arcane_reg.position.w" value="100" />
+		<override_Res_Regen_Arcane4 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_arcane_reg.title.font_color" value="255,255,255,255" />
+		<override_Res_Regen_Arcane5 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_arcane_reg.title.font_size" value="9" />
+		
+		<!-- create/customize custom shadow -->
+		<override_Res_Regen_Arcane_CS1 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_arcane_reg.title.custom_shadow.enabled" value="1" />
+		<override_Res_Regen_Arcane_CS2 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_arcane_reg.title.custom_shadow.heavy" value="1" />
+		<override_Res_Regen_Arcane_CS3 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_arcane_reg.title.custom_shadow.color" value="255,0,0,0" />
+
+		<!-- MANA REGEN / Witch Doctor -->
+		<override_Res_Regen_Mana1 enabled="0" file="ui_default_labels_ball_of_resource" path="labels.resource_mana_reg.position.x" value="0" />
+		<override_Res_Regen_Mana2 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_mana_reg.position.y" value="50" />
+		<override_Res_Regen_Mana3 enabled="0" file="ui_default_labels_ball_of_resource" path="labels.resource_mana_reg.position.w" value="100" />
+		<override_Res_Regen_Mana4 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_mana_reg.title.font_color" value="255,255,255,255" />
+		<override_Res_Regen_Mana5 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_mana_reg.title.font_size" value="9" />
+		
+		<!-- create/customize custom shadow -->
+		<override_Res_Regen_Mana_CS1 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_mana_reg.title.custom_shadow.enabled" value="1" />
+		<override_Res_Regen_Mana_CS2 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_mana_reg.title.custom_shadow.heavy" value="1" />
+		<override_Res_Regen_Mana_CS3 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_mana_reg.title.custom_shadow.color" value="255,0,0,0" />
+
+		<!-- SPIRIT REGEN / Monk -->
+		<override_Res_Regen_Spirit1 enabled="0" file="ui_default_labels_ball_of_resource" path="labels.resource_spirit_reg.position.x" value="0" />
+		<override_Res_Regen_Spirit2 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_spirit_reg.position.y" value="50" />
+		<override_Res_Regen_Spirit3 enabled="0" file="ui_default_labels_ball_of_resource" path="labels.resource_spirit_reg.position.w" value="100" />
+		<override_Res_Regen_Spirit4 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_spirit_reg.title.font_color" value="255,0,0,0" />
+		<override_Res_Regen_Spirit5 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_spirit_reg.title.font_size" value="9" />
+
+		<!-- FURY REGEN / Barbarian -->
+		<override_Res_Regen_Fury1 enabled="0" file="ui_default_labels_ball_of_resource" path="labels.resource_fury_reg.position.x" value="0" />
+		<override_Res_Regen_Fury2 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_fury_reg.position.y" value="50" />
+		<override_Res_Regen_Fury3 enabled="0" file="ui_default_labels_ball_of_resource" path="labels.resource_fury_reg.position.w" value="100" />
+		<override_Res_Regen_Fury4 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_fury_reg.title.font_color" value="255,0,0,0" />
+		<override_Res_Regen_Fury5 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_fury_reg.title.font_size" value="9" />
+
+		<!-- HATRED REGEN / Demon Hunter -->
+		<override_Res_Regen_Hatred1 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_hatred_reg.position.x" value="44" />
+		<override_Res_Regen_Hatred2 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_hatred_reg.position.y" value="55" />
+		<override_Res_Regen_Hatred3 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_hatred_reg.position.w" value="0" />
+		<override_Res_Regen_Hatred4 enabled="0" file="ui_default_labels_ball_of_resource" path="labels.resource_hatred_reg.title.font_color" value="255,255,160,160" />
+		<override_Res_Regen_Hatred5 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_hatred_reg.title.font_size" value="8" />
+		
+		<!-- create/customize custom shadow -->
+		<override_Res_Regen_Hatred_CS1 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_hatred_reg.title.custom_shadow.enabled" value="1" />
+		<override_Res_Regen_Hatred_CS2 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_hatred_reg.title.custom_shadow.heavy" value="1" />
+		<override_Res_Regen_Hatred_CS3 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_hatred_reg.title.custom_shadow.color" value="255,0,0,0" />
+
+		<!-- DISCIPLINE REGEN / Demon Hunter -->
+		<override_Res_Regen_Discipline1 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_discipline_reg.position.x" value="53" />
+		<override_Res_Regen_Discipline2 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_discipline_reg.position.y" value="55" />
+		<override_Res_Regen_Discipline3 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_discipline_reg.position.w" value="0" />
+		<override_Res_Regen_Discipline4 enabled="0" file="ui_default_labels_ball_of_resource" path="labels.resource_discipline_reg.title.font_color" value="255,160,160,255" />
+		<override_Res_Regen_Discipline5 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_discipline_reg.title.font_size" value="8" />
+		
+		<!-- create/customize custom shadow -->
+		<override_Res_Regen_Discipline_CS1 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_discipline_reg.title.custom_shadow.enabled" value="1" />
+		<override_Res_Regen_Discipline_CS2 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_discipline_reg.title.custom_shadow.heavy" value="1" />
+		<override_Res_Regen_Discipline_CS3 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_discipline_reg.title.custom_shadow.color" value="255,0,0,0" />
+
+		<!-- WRATH REGEN / Crusader -->
+		<override_Res_Regen_Wrath1 enabled="0" file="ui_default_labels_ball_of_resource" path="labels.resource_wrath_reg.position.x" value="0" />
+		<override_Res_Regen_Wrath2 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_wrath_reg.position.y" value="50" />
+		<override_Res_Regen_Wrath3 enabled="0" file="ui_default_labels_ball_of_resource" path="labels.resource_wrath_reg.position.w" value="100" />
+		<override_Res_Regen_Wrath4 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_wrath_reg.title.font_color" value="255,0,0,0" />
+		<override_Res_Regen_Wrath5 enabled="1" file="ui_default_labels_ball_of_resource" path="labels.resource_wrath_reg.title.font_size" value="9" />
+
+	</overrides>
+
+</config>

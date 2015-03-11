@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+
+	<templates>
+	
+		<!-- Experience Bar Zone -->
+		<expbar_def enabled="1" zone="expbar">
+		</expbar_def>
+
+		<!-- Base Settings For Experience Bar Text -->
+		<txt template="expbar_def">
+			<position w="5.5" h="2.55" container="*window-rect-center" />
+			<body color="0,0,0,0" />
+			<title font_family="verdana" font_halign="Center" font_size="6" font_bold="0" font_color="255,255,255,255" font_shadow="0" />
+			<conditions only_at_max_level="1" mouse_near="18.8,91.25,62.3,0.85" only_idle="1" />
+		</txt>
+
+		<!-- Base Settings For Measurements Text -->
+		<txt_meas template="txt">
+			<position w="8.75" />
+			<title font_color="255,199,179,119" font_halign="Right" />
+		</txt_meas>
+
+		<!-- Base Settings For Requirements Text -->
+		<txt_req template="txt">
+			<title font_color="255,199,179,119" font_halign="Right" />
+		</txt_req>
+
+		<!-- Base Settings For Time Values -->
+		<time template="txt">
+			<position w="6.75" />
+			<title font_halign="Right" />
+		</time>
+		
+		<!-- Base Settings For Experience Required Values -->
+		<expreq template="time">
+			<position w="4.5" />
+			<title font_color="255,0,255,0" />
+		</expreq>
+		
+		<!-- Base Settings For Experience per Hour Values -->
+		<xph template="txt">
+			<position w="5" />
+			<title font_halign="Left" />
+		</xph>
+	</templates>
+
+	<labels>
+
+		<!-- Exp on left side -->
+		<Exp_Over_Bar_Left enabled="1" expression="*exp-in-this-level-nok" container="Root.NormalLayer.game_dialog_backgroundScreenPC.game_window_hud_overlay">
+			<position x="41.9" y="45" w="8" h="11" container="Root.NormalLayer.game_dialog_backgroundScreenPC.game_window_hud_overlay" />
+			<title font_family="calibri" font_size="8.5" font_color="255,255,255,255" font_halign="Right" font_bold="0" font_shadow="0">
+				<custom_shadow enabled="1" heavy="1" color="255,0,0,0" />
+			</title>
+			<conditions only_at_max_level="0" />
+		</Exp_Over_Bar_Left>
+
+		<!-- Exp on right side -->
+		<Exp_Over_Bar_Right enabled="1" expression="*exp-to-next-level-nok" container="Root.NormalLayer.game_dialog_backgroundScreenPC.game_window_hud_overlay">
+			<position x="50.3" y="45" w="8" h="11" container="Root.NormalLayer.game_dialog_backgroundScreenPC.game_window_hud_overlay" />
+			<title font_family="calibri" font_size="8.5" font_color="255,255,255,255" font_halign="Left" font_bold="0" font_shadow="0">
+				<custom_shadow enabled="1" heavy="1" color="255,0,0,0" />
+			</title>
+			<conditions only_at_max_level="1" />
+		</Exp_Over_Bar_Right>
+
+		<!-- Slash in middle -->
+		<Exp_Over_Bar_Slash enabled="1" expression="/" container="Root.NormalLayer.game_dialog_backgroundScreenPC.game_window_hud_overlay">
+			<position x="49.75" y="44.6" w="8" h="11" container="Root.NormalLayer.game_dialog_backgroundScreenPC.game_window_hud_overlay" />
+			<title font_family="verdana" font_size="6.5" font_color="255,255,255,255" font_halign="Left" font_bold="0" font_shadow="0">
+				<custom_shadow enabled="1" heavy="1" color="255,0,0,0" />
+			</title>
+			<conditions only_at_max_level="0" />
+		</Exp_Over_Bar_Slash>
+		
+		<!-- Current Paragon Level -->
+		<level_cur template="txt" expression="*exp-level-cur">
+			<position x="18.8" y="90.25" w="24.92"/>
+			<conditions only_at_max_level="1" mouse_near="" only_idle="" />
+		</level_cur>
+
+		<!-- Experience Per Hour Today -->
+		<xph_today template="txt" expression="*stattracker.hero_today.exp_per_hour">
+			<position x="56.18" y="90.25" w="24.92"/>
+			<conditions only_at_max_level="1" mouse_near="" only_idle="" />
+		</xph_today>
+		
+		<!-- Requirements Background -->
+		<fixed_background_requirements template="expbar_def" expression=" ">
+			<position x="13.4" y="74.4" w="14.85" h="13.19" container="*window-rect-center" />
+			<body color="255,0,0,0" />
+			<border color="255,46,39,27" stroke="2.5" />
+			<title font_family="verdana" font_size="6" font_halign="Center" font_bold="0" font_color="255,0,0,0" font_shadow="0" />
+			<conditions only_at_max_level="1" mouse_near="18.8,91.25,62.3,0.85" only_idle="1" />
+		</fixed_background_requirements>
+		
+		<!-- Measurements Background -->
+		<fixed_background_measurements template="expbar_def" expression=" ">
+			<position x="71.4" y="74.4" w="14.85" h="13.19" container="*window-rect-center" />
+			<body color="255,0,0,0" />
+			<border color="255,46,39,27" stroke="2.5" />
+			<title font_family="verdana" font_size="6" font_halign="Center" font_bold="0" font_color="255,0,0,0" font_shadow="0" />
+			<conditions only_at_max_level="1" mouse_near="18.8,91.25,62.3,0.85" only_idle="1" />
+		</fixed_background_measurements>
+
+		<!-- Requirements Header -->
+		<header_requirements template="txt" expression="To Next Level">
+			<position x="13.4" y="74.1" w="15" />
+			<title font_color="255,199,179,119" />
+		</header_requirements>
+
+		<!-- Measurements Header -->
+		<header_measurements template="txt" expression="Experience Per Hour">
+			<position x="71.6" y="74.1" w="14.85" />
+			<title font_color="255,199,179,119" />
+		</header_measurements>
+
+		<!-- Time Header -->
+		<to_nextx_time template="time" expression="Time">
+			<position x="16.7" y="85.3" />
+			<title font_color="255,199,179,119" font_halign="Center"/>
+		</to_nextx_time>
+		
+		<!-- Experience Required Header -->
+		<to_nextx_exp template="expreq" expression="Exp">
+			<position x="24.1" y="85.3" />
+			<title font_color="255,199,179,119" font_halign="Center"/>
+		</to_nextx_exp>
+
+		<!-- Current Level +1 -->
+		<to_next1_txt template="txt_req" expression="+1">
+			<position x="11" y="75.5" />
+		</to_next1_txt>
+		
+		<to_next1_time template="time" expression="*exp-level-time-to-next1-value">
+			<position x="16.8" y="75.5" />
+		</to_next1_time>
+		
+		<to_next1_exp template="expreq" expression="*exp-level-exp-to-next1">
+			<position x="23.45" y="75.5" />
+		</to_next1_exp>
+
+		<!-- Current Level +2 -->
+		<to_next2_txt template="txt_req" expression="+2">
+			<position x="11" y="76.9" />
+		</to_next2_txt>
+		
+		<to_next2_time template="time" expression="*exp-level-time-to-next2-value" >
+			<position x="16.8" y="76.9" />
+		</to_next2_time>
+		
+		<to_next2_exp template="expreq" expression="*exp-level-exp-to-next2">
+			<position x="23.45" y="76.9" />
+		</to_next2_exp>
+
+		<!-- Current Level +3 -->
+		<to_next3_txt template="txt_req" expression="+3">
+			<position x="11" y="78.3" />
+		</to_next3_txt>
+		
+		<to_next3_time template="time" expression="*exp-level-time-to-next3-value" >
+			<position x="16.8" y="78.3" />
+		</to_next3_time>
+		
+		<to_next3_exp template="expreq" expression="*exp-level-exp-to-next3">
+			<position x="23.45" y="78.3" />
+		</to_next3_exp>
+
+		<!-- Current Level +10 -->
+		<to_next10_txt template="txt_req" expression="+10">
+			<position x="11" y="79.7" />
+		</to_next10_txt>
+		
+		<to_next10_time template="time" expression="*exp-level-time-to-next10-value" >
+			<position x="16.8" y="79.7" />
+		</to_next10_time>
+		
+		<to_next10_exp template="expreq" expression="*exp-level-exp-to-next10">
+			<position x="23.45" y="79.7" />
+		</to_next10_exp>
+
+		<!-- Current Level +20 -->
+		<to_next20_txt template="txt_req" expression="+20">
+			<position x="11" y="81.1" />
+		</to_next20_txt>
+		
+		<to_next20_time template="time" expression="*exp-level-time-to-next20-value" >
+			<position x="16.8" y="81.1" />
+		</to_next20_time>
+		
+		<to_next20_exp template="expreq" expression="*exp-level-exp-to-next20">
+			<position x="23.45" y="81.1" />
+		</to_next20_exp>
+
+		<!-- Current Level +50 -->
+		<to_next50_txt template="txt_req" expression="+50">
+			<position x="11" y="82.5" />
+		</to_next50_txt>
+		
+		<to_next50_time template="time" expression="*exp-level-time-to-next50-value" >
+			<position x="16.8" y="82.5" />
+		</to_next50_time>
+		
+		<to_next50_exp template="expreq" expression="*exp-level-exp-to-next50">
+			<position x="23.45" y="82.5" />
+		</to_next50_exp>
+
+		<!-- Current Level +100 -->
+		<to_next100_txt template="txt_req" expression="+100">
+			<position x="11" y="83.9" />
+		</to_next100_txt>
+		
+		<to_next100_time template="time" expression="*exp-level-time-to-next100-value" >
+			<position x="16.8" y="83.9" />
+		</to_next100_time>
+		
+		<to_next100_exp template="expreq" expression="*exp-level-exp-to-next100">
+			<position x="23.45" y="83.9" />
+		</to_next100_exp>
+
+		<!-- Experience per Hour | Hero - Today -->
+		<xph_hero_today_again template="xph" expression="*stattracker.hero_today.exp_per_hour">
+			<position x="72.2" y="75.5" />
+		</xph_hero_today_again>
+		
+		<xph_hero_today_again_txt template="txt_meas" expression="Hero - Today">
+			<position x="77.2" y="75.5" />
+		</xph_hero_today_again_txt>
+
+		<!-- Experience per Hour | Account - Today -->
+		<xph_account_today_again template="xph" expression="*stattracker.account_today.exp_per_hour">
+			<position x="72.2" y="76.9" />
+		</xph_account_today_again>
+		
+		<xph_account_today_again_txt template="txt_meas" expression="Account - Today">
+			<position x="77.2" y="76.9" />
+		</xph_account_today_again_txt>
+
+		<!-- Experience per Hour | This Session -->
+		<xph_session template="xph" expression="*stattracker.current_session.exp_per_hour">
+			<position x="72.2" y="78.3" />
+		</xph_session>
+		
+		<xph_session_txt template="txt_meas" expression="This Session">
+			<position x="77.2" y="78.3" />
+		</xph_session_txt>
+
+		<!-- Experience per Hour | Session (Abs) -->
+		<xph_sessionabs template="xph" expression="*stattracker.current_session_abs.exp_per_hour">
+			<position x="72.2" y="79.7" />
+		</xph_sessionabs>
+		
+		<xph_sessionabs_txt template="txt_meas" expression="Session (Abs)">
+			<position x="77.2" y="79.7" />
+		</xph_sessionabs_txt>
+
+		<!-- Experience per Hour | Run -->
+		<xph_run template="xph" expression="*stattracker.current_run.exp_per_hour">
+			<position x="72.2" y="81.1" />
+		</xph_run>
+		
+		<xph_run_txt template="txt_meas" expression="Current Run">
+			<position x="77.2" y="81.1" />
+		</xph_run_txt>
+
+		<!-- Experience per Hour | In This Area -->
+		<xph_area template="xph" expression="*stattracker.current_area_currentrun.exp_per_hour">
+			<position x="72.2" y="82.5" />
+		</xph_area>
+		
+		<xph_area_txt template="txt_meas" expression="In This Area">
+			<position x="77.2" y="82.5" />
+		</xph_area_txt>
+
+		<!-- Experience per Hour | Avg In This Area -->
+		<xph_area_total template="xph" expression="*stattracker.current_area_total.exp_per_hour">
+			<position x="72.2" y="83.9" />
+		</xph_area_total>
+		
+		<xph_area_total_txt template="txt_meas" expression="Avg In This Area">
+			<position x="77.2" y="83.9" />
+		</xph_area_total_txt>
+    </labels>
+	
+	<overrides>
+	
+		<!-- Disable Paragon Experience Bar -->
+	    <override_ParaExpBar_Enable enabled="1" file="ui_default_labels_expbar" path="templates.default.enabled" value="0" />
+		 <!-- Disable Activator of Paragon Experience Bar -->
+        <override_ParaExpBar_Activator_Disable enabled="1" file="ui_default_labels_expbar" path="activators.activator.enabled" value="0" />
+		
+	</overrides>
+	
+</config>

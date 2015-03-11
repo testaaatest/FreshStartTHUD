@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<config>
+
+	<templates>
+
+		<default enabled="1" zone="attributes">
+			<position y="34.0" w="3.5" h="11.5" container="Root.NormalLayer.game_dialog_backgroundScreenPC.game_window_hud_overlay" />
+			<body enabled="1" color="160,0,0,0" stroke="0" />
+			<border enabled="1" color="80,0,0,0" stroke="1.5" />
+			<title font_family="verdana" font_size="6.7" font_bold="0" font_color="255,255,255,255" font_shadow="0" font_halign="Center" />
+		</default>
+
+	</templates>
+
+	<labels>
+
+		<!-- TAG: Power Pylon -->
+		<Tag_Power enabled="1" template="default" expression="Power" hint="">
+			<position x="42.0" y="-148" w="5" h="11.5" />
+			<body enabled="1" color="200,150,0,100" />
+			<title enabled="1" font_family="verdana" font_color="255,255,255,0" font_bold="1" font_shadow="1" font_halign="Center">
+				<custom_shadow enabled="1" heavy="1" color="255,0,0,0" />
+			</title>
+			<conditions enabled="1" active_buffs="262935/*" />
+		</Tag_Power>
+
+		<!-- TAG: Conduit Pylon -->
+		<Tag_Conduit enabled="1" template="default" expression="Conduit" hint="">
+			<position x="47.0" y="-148" w="5" h="11.5" />
+			<body enabled="1" color="200,150,0,100" />
+			<title enabled="1" font_family="verdana" font_color="255,255,255,0" font_bold="1" font_shadow="1" font_halign="Center">
+				<custom_shadow enabled="1" heavy="1" color="255,0,0,0" />
+			</title>
+			<conditions enabled="1" active_buffs="263029/*" />
+		</Tag_Conduit>
+
+		<!-- TAG: Conduit Pylon Greater Rift -->
+		<Tag_Conduit_GR enabled="1" template="default" expression="Conduit" hint="">
+			<position x="47.0" y="-148" w="5" h="11.5" />
+			<body enabled="1" color="200,150,0,100" />
+			<title enabled="1" font_family="verdana" font_color="255,255,255,0" font_bold="1" font_shadow="1" font_halign="Center">
+				<custom_shadow enabled="1" heavy="1" color="255,0,0,0" />
+			</title>
+			<conditions enabled="1" active_buffs="403404/*" />
+		</Tag_Conduit_GR>
+
+		<!-- TAG: Channeling Pylon -->
+		<Tag_Channel enabled="1" template="default" expression="Channel" hint="">
+			<position x="52.0" y="-148" w="5" h="11.5" />
+			<body enabled="1" color="200,150,0,100" />
+			<title enabled="1" font_family="verdana" font_color="255,255,255,0" font_bold="1" font_shadow="1" font_halign="Center">
+				<custom_shadow enabled="1" heavy="1" color="255,0,0,0" />
+			</title>
+			<conditions enabled="1" active_buffs="266258/*" />
+		</Tag_Channel>
+
+		<!-- TAG: Shield Pylon -->
+		<Tag_Shield enabled="1" template="default" expression="Shield" hint="">
+			<position x="57.0" y="-148" w="5" h="11.5" />
+			<body enabled="1" color="200,150,0,100" />
+			<title enabled="1" font_family="verdana" font_color="255,255,255,0" font_bold="1" font_shadow="1" font_halign="Center">
+				<custom_shadow enabled="1" heavy="1" color="255,0,0,0" />
+			</title>
+			<conditions enabled="1" active_buffs="266254" />
+		</Tag_Shield>
+
+	</labels>
+
+</config>

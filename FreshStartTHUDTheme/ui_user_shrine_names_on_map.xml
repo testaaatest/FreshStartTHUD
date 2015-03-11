@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<config>
+	
+	<templates>
+		
+		<Shrines_Default>
+			<map_label>
+				<text font_family="verdana" font_size="6" font_color="255,251,252,131" font_bold="0" font_shadow="0">
+					<custom_shadow enabled="1" heavy="1" color="100,0,0,0" />
+				</text>
+			</map_label>
+			<map_shape enabled="1" radius="4" ping_speed="0" shape="rectangle" color="255,251,252,131" stroke="2" />
+			<ground_label enabled="1" on_screen="1" off_screen="1">
+				<body enabled="1" color="255,255,255,64" stroke="0" />
+				<text font_family="verdana" font_size="6" font_color="255,0,0,0" font_bold="0" font_shadow="0">
+					<custom_shadow enabled="0" heavy="1" color="100,0,0,0" />
+				</text>
+			</ground_label>
+		</Shrines_Default>
+			
+		<Shrines_Name_Short enabled="1" template="Shrines_Default"/><!-- TO DISABLE: change enabled="1" to enabled="0" -->
+		<Pylons_Name_Short enabled="1" template="Shrines_Default"/><!-- TO DISABLE: change enabled="1" to enabled="0" -->
+		
+	</templates>
+	
+	<actors>
+			
+		<!-- Empowered -->
+		<Mark_Shrine_Empowered template="Shrines_Name_Short" speech_text="" keywords="shrine_empowered">
+			<map_label enabled="1" text="Empowered" />
+			<ground_label enabled="1" on_screen="1" off_screen="1" text="Empowered" />
+		</Mark_Shrine_Empowered>
+			
+		<!-- Enlightened -->
+		<Mark_Shrine_Enlightened template="Shrines_Name_Short" speech_text="" keywords="shrine_enlightened">
+			<map_label enabled="1" text="Enlightened" />
+			<ground_label enabled="1" on_screen="1" off_screen="1" text="Enlightened" />
+		</Mark_Shrine_Enlightened>
+
+		<!-- Fleeting -->
+		<Mark_Shrine_Fleeting template="Shrines_Name_Short" speech_text="" keywords="shrine_fleeting">
+			<map_label enabled="1" text="Fleeting" />
+			<ground_label enabled="1" on_screen="1" off_screen="1" text="Fleeting" />
+		</Mark_Shrine_Fleeting>
+			
+		<!-- Fortune -->
+		<Mark_Shrine_Fortune template="Shrines_Name_Short" speech_text="" keywords="shrine_fortune">
+			<map_label enabled="1" text="Fortune" />
+			<ground_label enabled="1" on_screen="1" off_screen="1" text="Fortune" />
+		</Mark_Shrine_Fortune>
+
+		<!-- Frenzied -->
+		<Mark_Shrine_Frenzied template="Shrines_Name_Short" speech_text="" keywords="shrine_frenzied">
+			<map_label enabled="1" text="Frenzied" />
+			<ground_label enabled="1" on_screen="1" off_screen="1" text="Frenzied" />
+		</Mark_Shrine_Frenzied>
+			
+		<!-- Protection -->
+		<Mark_Shrine_Protection template="Shrines_Name_Short" speech_text="" keywords="shrine_protection">
+			<map_label enabled="1" text="Protection" />
+			<ground_label enabled="1" on_screen="1" off_screen="1" text="Protection" />
+		</Mark_Shrine_Protection>
+			
+		<!-- Channeling -->
+		<Mark_Shrine_Channeling template="Pylons_Name_Short" speech_text="" keywords="pylon_channeling">
+			<map_label enabled="1" text="Channeling" />
+			<ground_label enabled="1" on_screen="1" off_screen="1" text="Channeling" />
+		</Mark_Shrine_Channeling>
+			
+		<!-- Conduit -->
+		<Mark_Shrine_Conduit template="Pylons_Name_Short" speech_text="" keywords="pylon_conduit">
+			<map_label enabled="1" text="Conduit" />
+			<ground_label enabled="1" on_screen="1" off_screen="1" text="Conduit" />
+		</Mark_Shrine_Conduit>
+
+		<!-- Power -->
+		<Mark_Shrine_Power template="Pylons_Name_Short" speech_text="" keywords="pylon_power">
+			<map_label enabled="1" text="Power" />
+			<ground_label enabled="1" on_screen="1" off_screen="1" text="Power" />
+		</Mark_Shrine_Power>
+			
+		<!-- Shield -->
+		<Mark_Shrine_Shield template="Pylons_Name_Short" speech_text="" keywords="pylon_shield">
+			<map_label enabled="1" text="Shield" />
+			<ground_label enabled="1" on_screen="1" off_screen="1" text="Shield" />
+		</Mark_Shrine_Shield>
+			
+		<!-- Speed -->
+		<Mark_Shrine_Speed template="Pylons_Name_Short" speech_text="" keywords="pylon_speed">
+			<map_label enabled="1" text="Speed" />
+			<ground_label enabled="1" on_screen="1" off_screen="1" text="Speed" />
+		</Mark_Shrine_Speed>
+			
+	</actors>
+
+	<overrides>
+		<override_Shrine_All1 enabled="1" file="ui_default_actors" path="actors.shrine_all.enabled" value="0" /> <!-- Disable Shrines (Re-added as <ACTOR>) -->
+	</overrides>
+
+</config>

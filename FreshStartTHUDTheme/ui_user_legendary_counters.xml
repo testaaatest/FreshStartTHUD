@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<config>
+
+	<labels>
+
+		<!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^	-->
+		<!--	SESSION LEGENDARIES    	-->
+		<!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^	-->
+
+		<!-- Add new label counter for legendary drops during current session -->
+
+		<Legendary_Counter1 enabled="1" expression="Session Legendaries" >			
+			<!-- <position x="86.1" y="96.4" w="0" h="0" /> -->
+			<position x="78.0" y="98.7" w="0" h="0" />
+			<title font_family="verdana" font_size="6.9" font_bold="1" font_color="255,255,120,0" font_shadow="1" font_halign="Center">
+				<custom_shadow enabled="1" heavy="1" color="255,0,0,0" />
+			</title>
+		</Legendary_Counter1>
+
+		<Legendary_Counter2 enabled="1" expression="*stattracker.current_session.items_legendary" value_format="dyn" >
+			<!-- <position x="90.2" y="96.2" w="0" h="0" /> -->
+			<position x="80.0" y="96.5" w="0" h="0" />
+			<title font_family="verdana" font_size="11.0" font_bold="1" font_color="255,255,255,255" font_shadow="1" font_halign="Center">
+				<custom_shadow enabled="1" heavy="1" color="255,0,0,0" />
+			</title>
+		</Legendary_Counter2>
+
+		<!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^	-->
+		<!--	LEGENDARIES Today   	-->
+		<!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^	-->
+
+		<legs_label enabled="1" expression="Legendaries Found Today">
+			<position x="0" y="100" w="125" h="10" container="*portrait-bottom" />
+			<title font_family="tahoma" font_size="6" font_bold="1" font_color="255,191,100,47" font_shadow="1" font_halign="Center" />
+		</legs_label>
+
+		<legs_count enabled="1" expression="*stattracker.account_today.items_legendary" hint="Total Legendaries Found Today">
+			<position x="0" y="100" w="100" h="30" container="*portrait-bottom" />
+			<title font_family="tahoma" font_size="6" font_bold="1" font_color="255,255,255,255" font_shadow="1" font_halign="Center" />
+		</legs_count>
+
+	</labels>
+
+</config>

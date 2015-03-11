@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<config>
+
+   <overrides>
+   
+      <!-- disable ALL / Re-added as <Main> -->
+      <override_KeepCorner enabled="1" file="ui_default_main" path="inventory.keep_corner.enabled" value="0" />
+      <override_SellCorner enabled="1" file="ui_default_main" path="inventory.force_sell_corner.enabled" value="0" />
+      <override_SellDarken enabled="1" file="ui_default_main" path="inventory.sell_darkening.enabled" value="0" />
+
+      <!-- Ancient Label (number 1) / Re-added as <Main> -->
+      <override_Ancient_Label1 enabled="1" file="ui_default_main" path="inventory.ancient_rank.enabled" value="0" />
+      
+      <!-- Inventory Item Bar showing number of mats -->
+      <override_ItemBar enabled="1" file="ui_default_main" path="inventory.item_bar.enabled" value="0" />
+      <!-- Horadric Cache info -->
+      <override_Horadric_Cache enabled="1" file="ui_default_main" path="inventory.horadric_cache.enabled" value="0" />
+
+
+   </overrides>
+
+   <inventory enabled="1">
+   <keep_corner enabled="0" color="255,128,255,84" stroke="-1.6" />
+   <force_sell_corner enabled="0" color="255,255,0,0" stroke="-1.6" />
+   <sell_darkening enabled="0" color="178,38,38,38" stroke="0" />
+   <accbound enabled="0" /> <!-- display the new account-bound "anchor" -->
+
+   <item_bar enabled="1" /> <!-- display the mats under inventory bags -->
+   <legendary_gem enabled="1" /> <!-- display the rank of legendary gems -->
+   <horadric_cache enabled="1" /> <!-- display the act/difficulty of Horadric caches (bounty bags) -->
+
+   <ancient_rank enabled="1"> <!-- display the rank (1) of ancient items -->
+      <title font_family="verdana" font_size="11" font_bold="1" font_color="255,0,0,0" font_shadow="1">
+         <custom_shadow enabled="1" heavy="1" color="255,255,0,0" />
+      </title>
+   </ancient_rank>
+</inventory>
+
+</config>

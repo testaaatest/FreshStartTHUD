@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<!--▫▪▪▫▫▪▪▫▫▪▪▫▫▪▪▫▫▪▪▫▫▪▪▫▫▪▪▫▫▪▪▫▫▪▪▫▫▪▪▫▫▪▪▫▫▪▪▫▫▪▪▫
+             2.1.2 Goblins Based on Snippet from Arkahr
+        ▫▪▪▫▫▪▪▫▫▪▪▫▫▪▪▫▫▪▪▫▫▪▪▫▫▪▪▫▫▪▪▫▫▪▪▫▫▪▪▫▫▪▪▫▫▪▪▫▫▪▪▫-->
+	<templates>
+        <goblin enabled="1" speech_text="" keywords="" extra_decorators="deco_fill/map_shape">                                             <!-- Template used by New Goblin Marking for 2.1.2 -->
+            <map_shape enabled="1" radius="8" ping_speed="0" shape="circle" color="180,255,255,255" stroke="0" />
+            <deco_fill enabled="1" radius="4.5" ping_speed="0" shape="circle" color="180,0,120,0" stroke="0" />
+            <ground_label enabled="1" on_screen="1" off_screen="1" text="default">                                                         <!-- Off Screen Label for Chasing Goblin -->    
+                <body enabled="1" color="255,255,255,255" stroke="0" />                                                                    <!-- Default Label Color -->
+                <text font_family="verdana" font_size="8" font_bold="1" font_color="255,255,255,255" font_shadow="0">                      <!-- Default Label Font  -->
+                    <custom_shadow enabled="1" heavy="1" color="128,0,0,0" />
+                </text>
+            </ground_label>
+        </goblin>
+
+        <blood_thief template="goblin">            
+            <deco_fill color="180,155,0,255" />                                                                                            <!-- Violet -->        
+            <map_shape color="180,196,107,255" />                                                                                          <!-- Lighter Violet -->
+            <ground_label>                
+                <body color="180,155,0,255" />
+            </ground_label>
+        </blood_thief>
+
+        <malevolent_tormentor template="goblin">
+            <deco_fill color="180,255,0,0" />                                                                                              <!-- red -->    
+            <map_shape color="180,255,87,87" />                                                                                            <!-- lighter red -->
+            <ground_label>
+                <body color="180,255,0,0" />
+            </ground_label>                
+        </malevolent_tormentor>
+
+        <odious_colector template="goblin">
+            <deco_fill color="180,0,255,0" />                                                                                              <!-- green -->    
+            <map_shape color="180,158,255,158" />                                                                                          <!-- lighter green -->                
+            <ground_label>
+                <body color="180,0,255,0" />
+            </ground_label>            
+        </odious_colector>    
+
+        <gem_hoarder template="goblin">
+            <deco_fill color="50,255,255,255" />                                                                                           <!-- opaque white -->    
+            <map_shape color="180,255,255,255" />                                                                                          <!-- white -->                
+            <ground_label>
+                <body color="180,255,255,255" />
+            </ground_label>            
+        </gem_hoarder>    
+
+        <treasure_goblin template="goblin">
+            <deco_fill color="180,255,255,0" />                                                                                            <!-- yellow -->        
+            <map_shape color="180,255,255,112" />                                                                                          <!-- lighter yellow -->
+            <ground_label>
+                <body color="180,255,255,0" />
+            </ground_label>            
+        </treasure_goblin>
+
+    
+        <treasure_fiend template="goblin">                                                                                                 <!-- extra goblin found in Vault -->
+            <deco_fill color="180,255,163,15" />                                                                                           <!-- orange -->        
+            <map_shape color="180,255,198,107" />                                                                                          <!-- lighter orange -->
+            <ground_label>
+                <body color="180,255,163,15" />
+            </ground_label>            
+        </treasure_fiend>
+	</templates>
+
+	<monsters>
+	    <goblin_blood_thief enabled="1" template="blood_thief" keywords="groups=Blood Thief" />                         <!-- Mark Goblins By Arkahr -->
+        <goblin_malevolent_tormentor enabled="1" template="malevolent_tormentor" keywords="groups=Malevolent Tormentor" />
+        <goblin_odious_collector enabled="1" template="odious_collector" keywords="groups=Odious Collector" />
+        <goblin_gem_hoarder enabled="1" template="gem_hoarder" keywords="groups=Gem Hoarder" />
+        <goblin_treasure_goblin enabled="1" template="treasure_goblin" keywords="groups=Treasure Goblin" />
+        <goblin_treasure_fiend enabled="1" template="treasure_fiend" keywords="groups=Treasure Fiend" />
+    </monsters>
+	
+	<overrides>
+        <override_Goblin_Actor_Disabled enabled="1" file="ui_default_actors_monsters" path="actors.goblin_portal.enabled" value="0" />                       <!-- Disable Minimap Dots for Goblin Portals -->
+        <override_Goblin_Monster_Disabled enabled="1" file="ui_default_actors_monsters" path="monsters.goblin.enabled" value="0" />                          <!-- Disable Minimap Dots for Goblins -->
+	</overrides>
+</config>

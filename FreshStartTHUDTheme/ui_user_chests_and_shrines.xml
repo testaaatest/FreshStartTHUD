@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<config>
+
+	<overrides>
+	
+		<!-- disabled All SHRINES & EVENTS / Re-added as <ACTORS> -->
+
+		<!-- disable Shrines -->
+		<override_Shrines_All enabled="1" file="ui_default_actors" path="actors.shrine_all.enabled" value="0" />
+
+		<!-- disable Healing Wells -->
+		<override_Healing_Wells enabled="1" file="ui_default_actors" path="actors.healing_well.enabled" value="0" />
+
+		<!-- disable Pools of Reflection -->
+		<override_Pools_of_Reflection enabled="1" file="ui_default_actors" path="actors.pool_of_reflection.enabled" value="0" />
+
+		<!-- disable Cursed Chests & Shrines -->
+		<override_Cursed_Events enabled="1" file="ui_default_actors" path="actors.cursed_event.enabled" value="0" />
+
+		<!-- disable Normal Chests -->
+		<override_Norm_Chests enabled="1" file="ui_default_actors" path="actors.chest_normal.enabled" value="0" />
+
+		<!-- disable Resplendent Chests -->
+		<override_Resp_Chests enabled="1" file="ui_default_actors" path="actors.chest_resplendent.enabled" value="0" />
+
+		<!-- disable Racks -->
+		<override_Racks enabled="1" file="ui_default_actors" path="actors.rack_all.enabled" value="0" />
+	
+	</overrides>
+
+	<actors>
+
+		<!-- Mark all CHESTS & SHRINES on minimap -->
+
+		<!-- Normal Chests -->
+		<Mark_Chest_Normal enabled="1" speech_text="" keywords="chest_normal">
+			<map_shape enabled="1" radius="5.5" ping_speed="0" shape="circle" color="255,64,255,64" stroke="1.25" />
+		</Mark_Chest_Normal>
+
+		<!-- Resplendent Chests -->
+		<Mark_Chest_Resplendent enabled="1" speech_text="" keywords="chest_resplendent">
+			<map_shape enabled="1" radius="7.0" ping_speed="0" shape="circle" color="255,64,255,64" stroke="2.5" />
+		</Mark_Chest_Resplendent>
+
+		<!-- Racks -->
+		<Mark_Rack_All enabled="1" speech_text="" keywords="rack_all">
+			<map_shape enabled="1" radius="4.8" ping_speed="0" shape="rectangle" color="255,0,255,0" stroke="0.9" />
+		</Mark_Rack_All>
+
+		<!-- Cursed Chests & Shrines -->
+		<Mark_Cursed_Event enabled="1" speech_text="" keywords="cursed_event">
+			<map_shape enabled="1" radius="8" ping_speed="0" shape="circle" color="255,255,64,64" stroke="2" />
+			<ground_label enabled="1" on_screen="1" off_screen="1" text="default">
+				<body enabled="1" color="255,255,64,64" stroke="0" />
+				<text font_family="verdana" font_size="8" font_bold="0" font_color="255,255,255,255" font_shadow="0" />
+			</ground_label>
+		</Mark_Cursed_Event>
+
+		<!-- Healing Wells -->
+		<Mark_Healing_Well enabled="1" speech_text="" keywords="healing_well">
+			<map_shape enabled="1" radius="6" ping_speed="0" shape="healingwell" color="255,0,255,200" stroke="1" />
+			<ground_label enabled="1" on_screen="0" off_screen="0" text="default">
+				<body enabled="1" color="255,0,255,100" stroke="0" />
+				<text font_family="verdana" font_size="7.5" font_bold="1" font_color="255,0,0,0" font_shadow="0" />
+			</ground_label>
+		</Mark_Healing_Well>
+
+		<!-- Pools of Reflection -->
+		<Mark_Pool_of_Reflection enabled="1" speech_text="" keywords="pool_of_reflection">
+			<map_shape enabled="1" radius="4" ping_speed="0" shape="circle" color="255,255,255,64" stroke="2" />
+			<ground_label enabled="1" on_screen="0" off_screen="1" text="default">
+				<body enabled="1" color="255,255,255,64" stroke="0" />
+				<text font_family="verdana" font_size="7.5" font_bold="1" font_color="255,0,0,0" font_shadow="0" />
+			</ground_label>
+		</Mark_Pool_of_Reflection>
+
+	</actors>
+
+</config>

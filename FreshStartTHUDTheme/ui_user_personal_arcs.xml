@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <!--????????????????????????????????????????????????????
+                            Personal Arcs
+        ????????????????????????????????????????????????????-->
+
+    <personal enabled="1">                                                                              <!-- Adds Personal Arcs below the feet of your character (For Health,Resource and Cooldown)-->
+        <conditions only_out_town="1" />                                                                     
+        
+        <health enabled="1">                                                                            <!-- Show the Health Arc? -->
+            <fill enabled="1" color="200,190,10,5" stroke="5" start_cap="Round" end_cap="Round" />      <!-- Fill(Main Color) Settings -->
+            <outline enabled="1" color="180,100,6,4" stroke="7" start_cap="Round" end_cap="Round" />    <!-- Outline Settings -->
+            <emptyfill enabled="0" color="128,32,32,32" stroke="3" start_cap="Round" end_cap="Round" /> <!-- Settings for the Background Color Left When the Bar is Not Full -->
+        </health>
+        
+        <cooldown enabled="1">                                                                          <!-- Show Arcs for Your Skill's Cooldown? -->
+            <fill enabled="0" color="250,255,117,51" stroke="3" start_cap="Round" end_cap="Round" />        
+            <outline enabled="1" color="150,0,0,0" stroke="6" start_cap="Round" end_cap="Round" />            
+            <emptyfill enabled="1" color="128,80,255,80" stroke="5" start_cap="Round" end_cap="Round" />    
+            <skill_image enabled="1" fade="0" />                                                        <!-- Show Skill Icon Next to the Cooldown Arcs? -->
+        </cooldown>
+
+        <res enabled="1">                                                                               <!-- Show the Resource Arc? -->
+            <arcane>                                                                                    <!-- Settings for the Arcane Resource -->
+                <fill enabled="1" color="200,70,19,95" stroke="5" start_cap="Round" end_cap="Round" />        
+                <outline enabled="1" color="180,125,40,120" stroke="7" start_cap="Round" end_cap="Round" />    
+            </arcane>
+            
+            <discipline>                                                                                <!-- Settings for the Discipline Resource -->
+                <fill enabled="1" color="200,38,41,108" stroke="5" start_cap="Round" end_cap="Round" />        
+                <outline enabled="1" color="180,107,122,228" stroke="7" start_cap="Round" end_cap="Round" />
+            </discipline>
+            
+            <hatred>                                                                                    <!-- Settings for the Hatred Resource -->
+                <fill enabled="1" color="200,192,62,23" stroke="5" start_cap="Round" end_cap="Round" />    
+                <outline enabled="1" color="180,35,10,5" stroke="7" start_cap="Round" end_cap="Round" />
+            </hatred>
+            
+            <fury>                                                                                      <!-- Settings for the Fury Resource -->
+                <fill enabled="1" color="200,250,250,75" stroke="5" start_cap="Round" end_cap="Round" />
+                <outline enabled="1" color="180,233,91,31" stroke="7" start_cap="Round" end_cap="Round" />
+            </fury>
+            
+            <mana>                                                                                      <!-- Settings for the Mana Resource -->
+                <fill enabled="1" color="200,30,25,80" stroke="5" start_cap="Round" end_cap="Round" />    
+                <outline enabled="1" color="180,55,50,161" stroke="7" start_cap="Round" end_cap="Round" />
+            </mana>
+            
+            <spirit>                                                                                    <!-- Settings for the Spirit Resource -->
+                <fill enabled="1" color="200,121,114,94" stroke="5" start_cap="Round" end_cap="Round" />
+                <outline enabled="1" color="150,219,237,229" stroke="7" start_cap="Round" end_cap="Round" />
+            </spirit>
+            
+            <wrath>                                                                                     <!-- Settings for the Wrath Resource -->
+                <fill enabled="1" color="200,121,114,94" stroke="5" start_cap="Round" end_cap="Round" />    
+                <outline enabled="1" color="150,219,237,229" stroke="7" start_cap="Round" end_cap="Round" />
+            </wrath>
+            
+            <emptyfill enabled="0" color="128,32,32,32" stroke="5" start_cap="Round" end_cap="Round" /> <!-- Settings for All Resources Empty Fill (The Color When The Resource is Not Full) -->
+        </res>
+    </personal>
+</config>
